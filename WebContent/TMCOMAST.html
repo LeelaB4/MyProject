@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="FLEXCUBE.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<script type="text/javascript" src="TMCOMAST.js">
+				</script>
+
+	<p id="text"
+		style="margin-right: -120px; position: absolute; left: 16px; color: white; top: -9px;
+	/* opacity: 1.7; */ z-index: 1;">User
+		Maintenance</p>
+
+
+	<div class="WNDtitlebar" id="WNDtitlebar">
+		<b class="BTNicon"><span class="ICOflexcube"></span></b>
+		<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+		<div class="WNDbuttons">
+			<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+				onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+			</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+				onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+			</a>
+			<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+				<a class="WNDmin" href="#" title="Minimize"
+					onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+			</button>
+
+		</div>
+	</div>
+
+	<!-- <div id="drag"> -->
+	<header id="header">
+
+
+		   
+
+		<div class="button_list">
+			<button id="NewId" class="button" type="button" value="New"
+				onclick="createNew();getDataFooter(); resetValues();"
+				onmousedown="">New</button>
+
+			<button id="Id" class="button" type="button" value="Query"
+				onclick="createBTN(); resetValues();" onmousedown="">Query</button>
+
+			<button id="ModifyId" class="button" type="button" value="Modify"
+				name="ModifyName"
+				onclick="modifybtnEnable(); enbFilds();samebtnSave();modifybtn();"
+				onmousedown="">Modify</button>
+			<button id="DeleteId" class="button" type="button" value="Delete"
+				name="DeleteName" onclick="validateDelet();  formDisable();"
+				onmousedown="">Delete</button>
+			<button id="CloseId" class="button" type="button" value="Close"
+				onclick="CloseAcc();" onmousedown="">Close</button>
+			<button id="ApprovalId" class="button" type="button" value="Approval"
+				onclick="approveData();" onmousedown="">Approval</button>
+			<button id="ReopenId" class="button" type="button" value="Reopen"
+				onclick="reopenEnable(); reOpen();" onmousedown="">Reopen</button>
+			<br>
+			<button id="buttonExec" class="button" type="button"
+				value="buttonExec" onclick="getCustomerDetails('GET');enableNew(); "
+				onmousedown="">Execute</button>
+			<button type="button" id="buttonSave" class="button"
+				value="buttonSave" onclick="validateEmail();" onmousedown="">Save</button>
+
+
+
+
+
+
+
+		</div>
+
+		<!-- <div id="create_btn"></div>
+		<div id="create_new"></div> -->
+	</header>
+
+
+
+	<!-- 	<form action="UserMaintenancePost"> -->
+
+
+
+
+
+	<div class="frame1">
+		<iframe src="" id="f1"></iframe>
+		<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+					<a class="WNDmin" href="#" title="Minimize"
+						onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+				</button>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div
+		style="top: 1;
+	/* margin-top: 0px; */ float: both; flex-grow: inherit; position: absolute; top: 113px; margin-bottom: 5px">
+
+		<label id="LOVL" style="color: red;">PRACT EMPID *</label> <input
+			type="text" id="pract_id" autocomplete="off" /> 
+			<img id="imgLov"
+			onclick="frameinWin('LOV_TMCOMAST','TMCOMAST','List of Values Practional id');insertData('pract_id','pract_name')"
+			src="Img/searcher.png" width="20" height="20"
+			style="position: absolute;margin-left: 5px;margin-top: 1px;" />
+
+
+		<img id="imgLov1"
+			onclick="frameinWin('LOV_TMCOMAST1','TMCOMAST','List of Values Practional id');insertData('pract_id','pract_name')"
+			src="Img/searcher.png" width="20" height="20"
+			style="position: absolute;margin-left: 5px;margin-top: 1px;" />
+
+
+		<div id="fetchData_div">
+			<button id="fetchbtn" class="button" type="button"
+				onclick="getCustomerDetails('UserMaintenanceModify')" onmousedown="">Fetch
+				Data</button>
+		</div>
+		<br>
+
+		<div id="filedText">
+			<div id="fields">
+				<label>PRACT NAME :</label> <input type="text" id="pract_name"
+					disabled class="disabled-input" autocomplete="off"> <br>
+
+				<input type="hidden" name="countRow" id="countRow"><br>
+			</div>
+			<!-- 
+				<div id="role">
+				<div id="screen">
+				<h2 class="hh4">User Role Mapping</h2>
+			    
+				<button class="BTNimg" name="cmdAddRow_BLK_USERROLE" id="cmdAddRow_BLK_USERROLE" tabindex="-1" onclick="fn('BLK_USERROLE')" title="Add Row">
+				<span tabindex="-1" class="ICOadd"><span class="LBLinv">Add Row</span></span></button>
+				<button class="BTNimg" name="cmdDelRow_BLK_USERROLE" id="cmdDelRow_BLK_USERROLE" tabindex="-1" onclick="fnDeleteRow('BLK_USERROLE')" title="Delete Row">
+				<span tabindex="-1" class="ICOremove"><span class="LBLinv">Delete Row</span></span></button>
+				</div>
+				
+				</div>
+				 -->
+
+
+			<div id="roleScreen">
+				<div id="box">
+					<div id="messege"></div>
+
+					<h3>User Role Mapping</h3>
+					<div id="rolepluse">
+						<input id="button1" type="button" value="+"
+							onclick="addRow('dataTable')"> <input id="button2"
+							type="button" value="-" onclick="deleteRow('dataTable')">
+					</div>
+				</div>
+
+
+				<div id="roletable">
+					<table id="dataTable"
+						class="table-bordered table-hover table-striped table">
+						<thead id="table_css">
+							<th style="font-size: 16px;">Check</th>
+							<th style="width: 139px; font-size: 14px">ASSET NO</th>
+							<th></th>
+							<th style="width: 169px; font-size: 14px">ASSET_NAME</th>
+							<th style="width: 169px; font-size: 14px">ASSET TYPE</th>
+							<th style="width: 97px;font-size: 14px;position: absolute;">SERIAL NO</th>
+							<th style="position: absolute;width: 378px;/* position: initial; */font-size: 14px">ASSET STARTDATE</th>
+							<th style="width: 664px;position: absolute;font-size: 14px">ASSET ENDDATE</th>
+							<th style="position: absolute;width: 949px;font-size: 14px">STATUS</th>
+						
+						</thead>
+						<tbody id="roletable"
+							 style="position: fixed;top: 271px;right: 40px;border: none;height: 241px;overflow-y: scroll;scroll-behavior: smooth;"></tbody>
+						<tbody id="tab"></tbody>
+					</table>
+
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<iframe id="frameCl"></iframe>
+	</div>
+
+
+	<footer id="footer">
+		<div id="field">
+
+			<label class="LBLstd" id="maker" for="1">Maker: </label> <input
+				class="TXTstd1" name="-1" id="cust_maker" type="text" value="">
+
+
+			<label class="LBLstd" id="Approver" for="1" readonly>Approver:</label>
+			<input class="TXTstd1" name="-1" id="cust_Approver" type="text"
+				value=""> <label class="LBLstd" id="Status" for="1">Status:</label>
+			<input class="TXTstd1" name="-1" id="cust_Status" type="text"
+				value=""> <label class="LBLstd" id="Once_auth" for="1">Once
+				Auth:</label> <input class="TXTstd1" name="-1" id="cust_Once_Auth1"
+				type="checkbox" onClick="disableCheckbox(this);" value=""> <input
+				class="TXTstd1" name="-1" id="cust_Once_Auth" type="text" value=""
+				hidden> <br> <label class="LBLstd" id="makerDT" for="1">Maker
+				DT stamp:</label> <input class="TXTstd" name="-1" id="cust_maker_dt_stamp"
+				type="text" value=""> <label class="LBLstd" id="Aprovertime"
+				for="1">Aprover DT stamp:</label> <input class="TXTstd1" name="-1"
+				id="cust_Aprovertime" type="text" value=""> <label
+				class="LBLstd" id="Aprovertime" for="1">Approver status:</label> <input
+				class="TXTstd1" name="-1" id="cust_Approver_statement" type="text"
+				value="">
+		</div>
+
+		<button id="cancel" class="cancel_button" type="button"
+			onclick="window.location.reload();" onmousedown=""
+			style="position: absolute; right: 87px; bottom: 0px; background: #0e7585; border: 1px; height: 21px; width: 55px; color: white;">Cancel</button>
+	</footer>
+</body>
+</html>

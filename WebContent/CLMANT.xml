@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="CLMANT.xsl"?>
+<div>
+<header>
+<button1>New</button1>
+<button2>Query</button2>
+<button3>Modify</button3>
+<button4>Delete</button4>
+<button5>Close</button5>
+<button6>Approval</button6>
+<button7>Reopen</button7>
+<br></br>
+<button8>Save</button8>
+<button9>Execute</button9> 
+</header>
+<tbody>
+  <!--  <Image>
+       <img id="imgLov" onclick="frameinWin('LOV_ITBPRMNT','ITBPRMNT','List of Values Customer No');insertData('PROJ_CODE')" src="searcher.png" width="20" height="20"/>
+</Image>  --> 
+ 
+<field1>Client ID :</field1>
+<field2>Client Name :</field2>
+<field3>Client Type :</field3>
+<field4>Client Category :</field4>
+<field5>Client Domain :</field5>
+<field6>Client SubDomain :</field6>
+<field7>Address 1 :</field7>
+<field8>Address 2 :</field8>
+<field9>Address 3 :</field9>
+<field10>Country :</field10>
+<field11>Territory :</field11>
+<field12>State : </field12>
+<field13>City : </field13>
+<field14>Zip Code : </field14>
+<field15>Contact No : </field15>
+<field16>Contact Email : </field16>
+<field17>SPC Contact No : </field17>
+<field18>SPC Email : </field18>
+<!-- <field19>Contact Email: </field19> -->
+<field20>RM Details : </field20>
+<field21>RM Name : </field21>
+<field22>RM Email : </field22>
+<field23>RM Contact No : </field23>
+</tbody>
+
+<footer>
+<type1>Maker:</type1>
+<type5>Maker DT stamp:</type5>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type2>Approver:</type2>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+<type8>Cancel</type8>
+</footer>
+</div>

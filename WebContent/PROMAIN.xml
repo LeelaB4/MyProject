@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="PROMAIN.xsl"?>
+<div>
+<header>
+<button1>New</button1>
+<button2>Query</button2>
+<button3>Modify</button3>
+<button4>Delete</button4>
+<button5>Close</button5>
+<button6>Approval</button6>
+<button7>Reopen</button7>
+<br></br>
+<button8>Save</button8>
+<button9>Execute</button9> 
+</header>
+ <tbody>
+
+   <Image>
+       <img id="imgLov" onclick="frameinWin('LOV_PROMAIN','PROMAIN','List of Values Customer No');insertData('PROJECTID')" src="searcher.png" width="20" height="20"/>
+</Image>
+<field1>Project Id *:</field1>
+<field2>Project Name *:</field2>
+<field3>Owner *:</field3>
+<field4>Owner Email *:</field4>
+<field5>Project Manager:</field5>
+<field6>Project Manager Email:</field6>
+<field7>Start Date *:</field7>
+<field8>End Date:</field8>
+<field9>Project Admin:</field9>
+<field10>Project Admin Email:</field10>
+<field11>Department:</field11>
+<field12>Project status *:</field12>
+<field13>Client Id:</field13>
+<field14>Client Name:</field14>
+<field15>Master Project ID:</field15>
+</tbody>
+
+
+
+ <footer>
+<type1>Maker:</type1>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type5>Maker DT stamp:</type5>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+<type8>Cancel</type8>
+</footer>
+</div>

@@ -1,0 +1,634 @@
+{
+
+	"screen_name": "samplescreen",
+
+	"data_sources": [
+
+		{
+
+			"data_source_name": "sttm_customers1",
+
+			"query_only": "N",
+
+			"key_cols": "cust_id~",
+
+			"data_blocks": [
+
+				{
+
+					"data_block_name": "BLK_sttm_customers1",
+
+					"relation": "one-to-one",
+
+					"parent": "",
+
+					"view_only": "N",
+
+					"data_block_type": "SE"
+
+				}
+
+			]
+
+		},
+
+		{
+
+			"data_source_name": "User_role1",
+
+			"query_only": "N",
+
+			"key_cols": "cust_id~",
+
+			"data_blocks": [
+
+				{
+
+					"data_block_name": "BLK_User_role1",
+
+					"relation": "one-to-one",
+
+					"parent": "BLK_sttm_customers1",
+
+					"view_only": "N",
+
+					"data_block_type": "ME"
+
+				}
+
+			]
+
+		},
+
+		{
+
+			"data_source_name": "ROLE_MASTER",
+
+			"key_cols": "cust_id~role_id",
+
+			"query_only": "Y"
+
+		}
+
+	],
+
+	"screen_elements": [
+
+		{
+
+			"element_seq": "1",
+
+			"element_type": "input",
+
+			"element_name": "cust_id",
+
+			"element_id": "cust_id",
+
+			"element_label": "LBL_cust_id",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "YES",
+
+			"modifiable": "N",
+
+			"lov": "Y",
+
+			"lov_id": "LOV_MODUSER",
+
+			"dbcol": "sttm_customers1.cust_id"
+
+		},
+
+		{
+
+			"element_seq": "2",
+
+			"element_type": "input",
+
+			"element_name": "cust_name",
+
+			"element_id": "cust_name",
+
+			"element_label": "LBL_cust_name",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "YES",
+
+			"modifiable": "N",
+
+			"dbcol:": "sttm_customers1.cust_name"
+
+		},
+
+		{
+
+			"element_seq": "3",
+
+			"element_type": "input",
+
+			"element_name": "cust_password",
+
+			"element_id": "cust_password",
+
+			"element_label": "LBL_cust_password",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "YES",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.cust_password"
+
+		},
+
+		{
+
+			"element_seq": "4",
+
+			"element_type": "input",
+
+			"element_name": "cust_dept",
+
+			"element_id": "cust_dept",
+
+			"element_label": "LBL_cust_dept",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.cust_dept"
+
+		},
+
+		{
+
+			"element_seq": "5",
+
+			"element_type": "input",
+
+			"element_name": "cust_email",
+
+			"element_id": "cust_email",
+
+			"element_label": "LBL_cust_email",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.cust_email"
+
+		},
+
+		{
+
+			"element_seq": "6",
+
+			"element_type": "input",
+
+			"element_name": "cust_manager",
+
+			"element_id": "cust_manager",
+
+			"element_label": "LBL_cust_manager",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.CUST_MANAGER"
+
+		},
+
+		{
+
+			"element_seq": "7",
+
+			"element_type": "input",
+
+			"element_name": "cust_ldap",
+
+			"element_id": "cust_ldap",
+
+			"element_label": "LBL_cust_ldap",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "NO",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.CUST_LDAP"
+
+		},
+
+		{
+
+			"element_seq": "8",
+
+			"element_type": "input",
+
+			"element_name": "cust_phone",
+
+			"element_id": "cust_phone",
+
+			"element_label": "LBL_cust_phone",
+
+			"fieldgroup": "",
+
+			"max_length": "12",
+
+			"data_type": "NUMBER",
+
+			"readonly": "NO",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.CUST_PHONE"
+
+		},
+
+		{
+
+			"element_seq": "9",
+
+			"element_type": "input",
+
+			"element_name": "cust_maker",
+
+			"element_id": "cust_maker",
+
+			"element_label": "LBL_cust_maker",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.MAKER"
+
+		},
+
+		{
+
+			"element_seq": "10",
+
+			"element_type": "input",
+
+			"element_name": "cust_Approver",
+
+			"element_id": "cust_Approver",
+
+			"element_label": "LBL_cust_Approver",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.APPROVER"
+
+		},
+
+		{
+
+			"element_seq": "11",
+
+			"element_type": "input",
+
+			"element_name": "cust_maker_dt_stamp",
+
+			"element_id": "cust_maker_dt_stamp",
+
+			"element_label": "LBL_cust_maker_dt_stamp",
+
+			"fieldgroup": "",
+
+			"max_length": "8",
+
+			"data_type": "TIMESTAMP",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.MAKER_DT_STAMP"
+
+		},
+
+		{
+
+			"element_seq": "12",
+
+			"element_type": "input",
+
+			"element_name": "cust_Aprovertime",
+
+			"element_id": "cust_Aprovertime",
+
+			"element_label": "LBL_cust_Aprovertime",
+
+			"fieldgroup": "",
+
+			"max_length": "8",
+
+			"data_type": "TIMESTAMP",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.APROVERTIME"
+
+		},
+
+		{
+
+			"element_seq": "13",
+
+			"element_type": "input",
+
+			"element_name": "cust_Status",
+
+			"element_id": "cust_Status",
+
+			"element_label": "LBL_cust_Status",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.STATUS"
+
+		},
+
+		{
+
+			"element_seq": "14",
+
+			"element_type": "input",
+
+			"element_name": "cust_Approver_statement",
+
+			"element_id": "cust_Approver_statement",
+
+			"element_label": "LBL_cust_Approver_statement",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.APPROVER_STATEMENT"
+
+		},
+
+		{
+
+			"element_seq": "15",
+
+			"element_type": "input",
+
+			"element_name": "cust_Once_Auth",
+
+			"element_id": "cust_Once_Auth",
+
+			"element_label": "LBL_cust_Once_Auth",
+
+			"fieldgroup": "",
+
+			"max_length": "1",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.ONCE_AUTH"
+
+		},
+
+		{
+
+			"element_seq": "16",
+
+			"element_type": "input",
+
+			"element_name": "countRow",
+
+			"element_id": "countRow",
+
+			"element_label": "LBL_countRow",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "NUMBER",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "sttm_customers1.COUNTROW"
+
+		},
+
+		{
+
+			"element_seq": "17",
+
+			"element_type": "input",
+
+			"element_name": "role_id",
+
+			"element_id": "inputid",
+
+			"element_label": "LBL_inputid",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "YES",
+
+			"modifiable": "Y",
+
+			"dbcol:": "User_role1.ROLE_ID"
+
+		},
+
+		{
+
+			"element_seq": "18",
+
+			"element_type": "input",
+
+			"element_name": "role_desc",
+
+			"element_id": "inputdesc",
+
+			"element_label": "LBL_inputdesc",
+
+			"fieldgroup": "",
+
+			"max_length": "20",
+
+			"data_type": "VARCHAR",
+
+			"readonly": "YES",
+
+			"mandatory": "NO",
+
+			"modifiable": "Y",
+
+			"dbcol:": "ROLE_MASTER.ROLE_DESC"
+
+		}
+
+	],
+
+	"screen_labels": [
+
+		{
+
+			"label_id1": "",
+
+			"label_id2": "",
+
+
+
+
+			"ENG": [
+
+				{
+
+					"label1": "",
+
+					"label2": ""
+
+
+
+
+
+				}
+
+			]
+
+		}
+
+	], 
+
+	"screen_LOV": [
+
+		{
+
+			"LOV_MODUSER": "SELECT CUST_ID,CUST_NAME FROM  sttm_customers1"
+
+		}
+
+	],
+
+	"screen_operations": [
+
+		"New~Modify,~Delete~Query~Close~Reopen~"
+
+	]
+
+}

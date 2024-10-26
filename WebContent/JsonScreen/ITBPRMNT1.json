@@ -1,0 +1,338 @@
+{
+	"TMCOMAST": {
+		"screen_name": "Practitioner Company Asset",
+		"data_sources": [
+			{
+				"data_source_name": "PRACTITIONER_COMPASSET_FOTTERTABLE",
+				"key_cols": "PRACTITIONER_COMPASSET_FOTTERTABLE.PRACT_ID~",
+				"query_only": "N",
+				"data_blocks": [
+					{
+						"data_block_name": "BLK_PRACTITIONER_COMPASSET_FOTTERTABLE",
+						"relation": "one-to-one",
+						"parent": "",
+						"view_only": "N",
+						"data_block_type": "SE"
+					}
+				]
+			},
+			{
+				"data_source_name": "PRACTITIONER_MAINTENANCE",
+				"key_cols": "PRACTITIONER_MAINTENANCE.PRACT_ID~",
+				"query_only": "Y",
+				"data_blocks": [
+					{
+						"data_block_name": "BLK_PRACTITIONER_MAINTENANCE",
+						"relation": "one-to-many",
+						"parent": "PRACTITIONER_COMPASSET_FOTTERTABLE",
+						"view_only": "N",
+						"data_block_type": "SE"
+					}
+				]
+			},
+			{
+				"data_source_name": "PRACTITIONER_COMPASSET",
+				"query_only": "N",
+				"key_cols": "PRACTITIONER_COMPASSET.PRACT_ID~",
+				"data_blocks": [
+					{
+						"data_block_name": "BLK_PRACTITIONER_COMPASSET",
+						"relation": "one-to-many",
+						"parent": "",
+						"view_only": "N",
+						"data_block_type": "ME"
+					}
+				]
+			},
+			{
+				"data_source_name": "ASSET_MAINTENANCE",
+				"key_cols": "ASSET_MAINTENANCE.ASSET_NO~",
+				"query_only": "Y",
+				"data_blocks": [
+					{
+						"data_block_name": "BLK_ASSET_MAINTENANCE",
+						"relation": "one-to-many",
+						"parent": "",
+						"view_only": "N",
+						"data_block_type": "ME"
+					}
+				]
+			}
+
+		],
+		"screen_elements": [
+			{
+				"BLK_PRACTITIONER_COMPASSET_FOTTERTABLE": [
+					{
+						"element_seq": "1",
+						"element_type": "INPUT",
+						"element_name": "PRACT_EMPID",
+						"element_id": "PRACT_EMPID",
+						"element_label": "LBL_PRACT_EMPID",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "YES",
+						"modifiable": "N",
+						"lov": "Y",
+						"lov_id": "LOV_MODUSER",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.PRACT_ID"
+					},
+					{
+						"element_seq": "2",
+						"element_type": "INPUT",
+						"element_name": "CUST_MAKER",
+						"element_id": "CUST_MAKER",
+						"element_label": "LBL_MAKER",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.MAKER"
+					},
+					{
+						"element_seq": "3",
+						"element_type": "INPUT",
+						"element_name": "CUST_TIMESTAMP",
+						"element_id": "CUST_TIMESTAMP",
+						"element_label": "LBL_TIMESTAMP",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "TIMESTAMP",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.MAKER_DT_STAMP"
+					},
+					{
+						"element_seq": "4",
+						"element_type": "input",
+						"element_name": "cust_Approver",
+						"element_id": "cust_Approver",
+						"element_label": "LBL_cust_Approver",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.APPROVER"
+					},
+					{
+						"element_seq": "5",
+						"element_type": "INPUT",
+						"element_name": "cust_APROVERTIME",
+						"element_id": "cust_APROVERTIME",
+						"element_label": "LBL_APROVERTIME",
+						"fieldgroup": "",
+						"max_length": "8",
+						"data_type": "TIMESTAMP",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.APROVERTIME"
+					},
+					{
+						"element_seq": "6",
+						"element_type": "INPUT",
+						"element_name": "cust_STATUS",
+						"element_id": "cust_STATUS",
+						"element_label": "LBL_cust_STATUS",
+						"fieldgroup": "",
+						"max_length": "8",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.STATUS"
+					},
+					{
+						"element_seq": "7",
+						"element_type": "INPUT",
+						"element_name": "cust_APPROVER_STATEMENT",
+						"element_id": "cust_APPROVER_STATEMENT",
+						"element_label": "LBL_APPROVER_STATEMENT",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.APPROVER_STATEMENT"
+					},
+					{
+						"element_seq": "8",
+						"element_type": "INPUT",
+						"element_name": "cust_ONCE_AUTH",
+						"element_id": "cust_ONCE_AUTH",
+						"element_label": "LBL_cust_ONCE_AUTH",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.ONCE_AUTH"
+					},
+					{
+						"element_seq": "9",
+						"element_type": "INPUT",
+						"element_name": "cust_COUNTROW",
+						"element_id": "cust_COUNTROW",
+						"element_label": "LBL_COUNTROW",
+						"fieldgroup": "",
+						"max_length": "1",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET_FOTTERTABLE.COUNTROW"
+					}
+				],
+				"BLK_PRACTITIONER_MAINTENANCE": [
+					{
+						"element_seq": "1",
+						"element_type": "input",
+						"element_name": "pract_PRACT_NAME",
+						"element_id": "pract_PRACT_NAME",
+						"element_label": "LBL_PRACT_NAME",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "YES",
+						"modifiable": "N",
+						"dbcol": "PRACTITIONER_MAINTENANCE.PRACT_NAME"
+					}
+				],
+				"BLK_PRACTITIONER_COMPASSET": [
+					{
+						"element_seq": "1",
+						"element_type": "input",
+						"element_name": "pract_ASSET_NO",
+						"element_id": "pract_ASSET_NO",
+						"element_label": "LBL_pract_ASSET_NO",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "YES",
+						"modifiable": "N",
+						"dbcol": "PRACTITIONER_COMPASSET.ASSET_NO"
+					},
+					{
+						"element_seq": "2",
+						"element_type": "input",
+						"element_name": "cust_ASSET_STARTDATE",
+						"element_id": "cust_maker",
+						"element_label": "LBL_cust_ASSET_STARTDATE",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "DATE",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET.ASSET_STARTDATE"
+					},
+					{
+						"element_seq": "3",
+						"element_type": "input",
+						"element_name": "cust_ASSET_ENDDATE",
+						"element_id": "cust_ASSET_ENDDATE",
+						"element_label": "LBL_ASSET_ENDDATE",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "DATE",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET.ASSET_ENDDATE"
+					},
+					{
+						"element_seq": "4",
+						"element_type": "input",
+						"element_name": "cust_ASSET_STATUS",
+						"element_id": "cust_ASSET_STATUS",
+						"element_label": "LBL_ASSET_STATUS",
+						"fieldgroup": "",
+						"max_length": "8",
+						"data_type": "VARCHAR2",
+						"readonly": "YES",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "PRACTITIONER_COMPASSET.ASSET_STATUS"
+					}
+				],
+				"BLK_ASSET_MAINTENANCE": [
+					{
+						"element_seq": "1",
+						"element_type": "input",
+						"element_name": "ASSET_NAME",
+						"element_id": "ASSET_NAME",
+						"element_label": "LBL_ASSET_NAME",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "YES",
+						"modifiable": "N",
+						"lov": "Y",
+						"lov_id": "LOV_MODUSER",
+						"dbcol": "ASSET_MAINTENANCE.ASSET_NAME"
+					},
+					{
+						"element_seq": "2",
+						"element_type": "input",
+						"element_name": "ASSET_TYPE",
+						"element_id": "ASSET_TYPE",
+						"element_label": "LBL_ASSET_TYPE",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "YES",
+						"modifiable": "Y",
+						"dbcol": "ASSET_MAINTENANCE.ASSET_TYPE"
+					},
+					{
+						"element_seq": "3",
+						"element_type": "input",
+						"element_name": "SERIAL_NO",
+						"element_id": "SERIAL_NO",
+						"element_label": "LBL_SERIAL_NO",
+						"fieldgroup": "",
+						"max_length": "20",
+						"data_type": "VARCHAR2",
+						"readonly": "NO",
+						"mandatory": "NO",
+						"modifiable": "Y",
+						"dbcol": "ASSET_MAINTENANCE.SERIAL_NO"
+					}
+				]
+			}
+		],
+		"screen_labels": [
+			{
+				"label_id1": "",
+				"label_id2": "",
+				"ENG": [
+					{
+						"label1": "",
+						"label2": ""
+					}
+				]
+			}
+		],
+		"screen_LOV": [
+			{
+				"LOV_MODUSER": "SELECT CUST_ID,CUST_NAME FROM  sttm_customers1"
+			}
+		],
+		"screen_operations": [
+			"New~Modify,~Delete~Query~Close~Reopen~"
+		]
+	}
+}

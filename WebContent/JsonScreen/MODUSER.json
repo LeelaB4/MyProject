@@ -1,0 +1,65 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"sttm_customers1",
+		"User_role1"
+	],
+	"BLOCK": {
+		"BLK_sttm_customers1": {
+			"APROVERTIME": "cust_Aprovertime",
+			"Status": "cust_Status",
+			"Approver_statement": "cust_Approver_statement",
+			"Once_Auth": "cust_Once_Auth",
+			"countRow": "countRow",
+			"cust_id": "cust_id",
+			"CUST_NAME": "cust_name",
+			"CUST_PASSWORD": "cust_password",
+			"CUST_DEPT": "cust_dept",
+			"CUST_EMAIL": "cust_email",
+			"CUST_MANAGER": "cust_manager",
+			"cust_ldap": "cust_ldap",
+			"CUST_PHONE": "cust_phone",
+			"maker": "cust_maker",
+			"maker_dt_stamp": "cust_maker_dt_stamp",
+			"Approver": "cust_Approver"
+		}
+	},
+	
+	
+	"VIEW_BLOCK": {
+		"VW_User_role1": {
+			"ROLE_ID": "inputid",
+			"ROLE_DESC": "inputdesc"
+		}
+	},
+	
+	
+	
+	"DYNAMIC_BLOCK": {
+		"BLK_User_role1": {
+			"CUST_ID": "cust_id"
+		},
+		"BLK2_User_role1": {
+			"ROLE_ID": "inputid"
+		}
+	},
+	"Get_BLOCK": {
+		"BLK_ROLE_MASTER": {
+			"ROLE_DESC": "inputdesc"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "sttm_customers1",
+			"sttm_customers1": "cust_id"
+		},
+		"DYNAMIC_TABLE_RELATION": {
+			"DYNAMIC_TABLE1": "User_role1",
+			"User_role1": "cust_id"
+		},
+		"Get_Table_Relation": {
+			"Get_Table1": "ROLE_MASTER",
+			"ROLE_MASTER": "ROLE_ID"
+		}
+	}
+}

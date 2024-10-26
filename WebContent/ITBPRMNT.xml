@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ITBPRMNT.xsl"?>
+<div>
+<header>
+<button1>New</button1>
+<button2>Query</button2>
+<button3>Modify</button3>
+<button4>Delete</button4>
+<button5>Close</button5>
+<button6>Approval</button6>
+<button7>Reopen</button7>
+<br></br>
+<button8>Save</button8>
+<button9>Execute</button9> 
+</header>
+<tbody>
+  <!--  <Image>
+       <img id="imgLov" onclick="frameinWin('LOV_ITBPRMNT','ITBPRMNT','List of Values Customer No');insertData('PROJ_CODE')" src="searcher.png" width="20" height="20"/>
+</Image>  --> 
+ 
+<field1>Project code:</field1>
+<field2>Project name:</field2>
+<field3>Application name:</field3>
+<field4>Application version:</field4>
+<field5>Application type:</field5>
+<field6>Application url:</field6>
+<field7>Browsers supported:</field7>
+<field8>Browser Edge:</field8>
+<field9>Browser Chrome: </field9>
+<field10>Browser Firefox: </field10>
+<field11>Browser Safari: </field11>
+<field12>Browser Opera: </field12>
+<field13>Others: </field13>
+</tbody>
+
+<footer>
+<type1>Maker:</type1>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type5>Maker DT stamp:</type5>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+<type8>Cancel</type8>
+</footer>
+</div>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ICCHSPCN.xsl"?>
+<div>
+<header>
+<button1 >  New </button1>
+<button2 > Query </button2>
+<button3 > Modify </button3>
+<button4> Delete </button4>
+<button5 > Close</button5>
+<button6>Approval</button6>
+<br></br>
+<button7>Save</button7>
+<button8> Execute </button8>
+<button9> Modify &amp; Save </button9>
+</header>
+
+<tbody>
+
+<field1 > Customer No  *: </field1>
+<field2 > Customer Name : </field2>
+<field3 > DOB : </field3>
+<field4 > Salary : </field4>
+<field5 > Dept :  </field5>
+
+</tbody>
+
+
+<body1>
+<data>Cancel</data>
+</body1>
+
+
+<footer>
+<type1>Maker: </type1>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type5>Maker DT stamp:</type5>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+
+</footer>
+
+
+</div>

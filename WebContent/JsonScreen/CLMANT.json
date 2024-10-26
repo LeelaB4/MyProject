@@ -1,0 +1,44 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"CLIENT_MAINTENANCE"
+	],
+	"BLOCK": {
+		"BLK_CLIENT_MAINTENANCE": {
+			"CLIENT_ID": "clnt_id",
+			"CLIENT_NAME": "clnt_name",
+			"CLIENT_TYPE": "clttype",
+			"CLIENT_CATEGORY": "cltcat",
+			"CLIENT_DOMAIN": "cltdmn",
+			"CLIENT_SUBDOMAIN": "cltsbdmn",
+			"ADDRESS1": "add1",
+			"ADDRESS2":"add2",
+			"ADDRESS3":"add3",
+			"COUNTRY":"contry",
+			"TERRITORY":"territ",
+			"STATE":"stat",
+			"CITY":"city",
+			"ZIP_CODE":"zcode",
+			"CONTACT_NO":"contno",
+			"CONTACT_EMAIL":"contmail",
+			"SPC_CONTACT_NO":"spcont",
+			"SPC_EMAIL":"spcmail",
+			"RM_NAME":"rmname",
+			"RM_EMAIL":"rmemail",
+			"RM_CONTACT_NO":"rmcontno",
+			"MAKER": "maker",
+			"MAKER_DT_STAMP": "maker_dt_stamp",
+			"APPROVER": "Approver",
+			"APROVERTIME": "Aprovertime",
+			"STATUS": "Status",
+			"APPROVER_STATEMENT": "Approver_statement",
+			"ONCE_AUTH": "Once_Auth"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "CLIENT_MAINTENANCE",
+			"CLIENT_MAINTENANCE": "CLIENT_ID"
+		}
+	}
+}

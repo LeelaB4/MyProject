@@ -1,0 +1,68 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"TASK_MAINTENANCE_FOTTER",
+		"TASK_MAINTENANCE"
+	],
+	"BLOCK": {
+		"BLK_TASK_MAINTENANCE_FOTTER": {
+			"PROJECT_ID": "proj_id",
+			"MAKER": "maker",
+			"MAKER_DT_STAMP": "maker_dt_stamp",
+			"APPROVER": "Approver",
+			"APROVERTIME": "Aprovertime",
+			"STATUS": "Status",
+			"APPROVER_STATEMENT": "Approver_statement",
+			"ONCE_AUTH": "Once_Auth",
+			"countRow": "countRow"
+		}
+	},
+	"DYNAMIC_BLOCK": {
+		"BLK_TASK_MAINTENANCE": {
+			"PROJECT_ID": "proj_id"
+		},
+		"BLK2_TASK_MAINTENANCE": {
+			"PARENT_TASK": "parenttask",
+			"TASK_CODE": "taskcode",
+			"TASK_NAME": "taskname",
+			"START_DATE": "startdate",
+			"END_DATE": "enddate",
+			"STATUS": "status"
+		}
+	},
+	"VIEW_BLOCK": {
+		"VW_TASK_MAINTENANCE_FOTTER": {
+			"PROJECT_ID": "proj_id",
+			"maker": "maker",
+			"maker_dt_stamp": "maker_dt_stamp",
+			"Approver": "Approver",
+			"APROVERTIME": "Aprovertime",
+			"Status": "Status",
+			"Approver_statement": "Approver_statement",
+			"Once_Auth": "Once_Auth",
+			"countRow": "countRow"
+		},
+		"VW_TASK_MAINTENANCE": {
+			"PARENT_TASK": "parenttask",
+			"TASK_CODE": "taskcode",
+			"TASK_NAME": "taskname",
+			"START_DATE": "startdate",
+			"END_DATE": "enddate",
+			"STATUS": "status"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "TASK_MAINTENANCE_FOTTER",
+			"TASK_MAINTENANCE_FOTTER": "PROJECT_ID"
+		},
+		"DYNAMIC_TABLE_RELATION": {
+			"DYNAMIC_TABLE1": "TASK_MAINTENANCE",
+			"TASK_MAINTENANCE": "PROJECT_ID"
+		},
+		"Get_Table_Relation": {
+			"Get_Table1": "TASK_MAINTENANCE",
+			"TASK_MAINTENANCE": "PROJECT_ID"
+		}
+	}
+}

@@ -1,0 +1,66 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"BLK_PRACTIONAL_mapping",
+		"PRACTIONER_PROJECT_MAPPING "
+	],
+	"BLOCK": {
+		"BLK_PRACTIONAL_MAPPING": {
+			"PRACT_ID": "pract_id",
+			"MAKER": "cust_maker",
+			"MAKER_DT_STAMP": "cust_maker_dt_stamp",
+			"APPROVER": "cust_Approver",
+			"APPROVER_TIME": "cust_Aprovertime",
+			"STATUS": "cust_Status",
+			"APPROVER_STATEMENT": "cust_Approver_statement",
+			"ONCE_AUTH": "cust_Once_Auth",
+			"COUNTROW": "countRow"
+		}
+	},
+	"DYNAMIC_BLOCK": {
+		"BLK_PRACTIONER_PROJECT_MAPPING": {
+			"pract_id": "pract_id"
+		},
+		"BLK2_PRACTIONER_PROJECT_MAPPING": {
+			"PROJECTID": "projectid",
+			"PROJECT_NAME": "projectname",
+			"START_DATE": "startdate",
+			"END_DATE": "enddate",
+			"STATUS": "status"
+		}
+	},
+	"VIEW_BLOCK": {
+		"VW_PRACTIONAL_MAPPING": {
+			"PRACT_ID": "pract_id",
+			"PRACT_NAME": "pract_name",
+			"PRACT_MOB": "pract_cont",
+			"PRACT_EMAIL": "pract_email",
+			"PRACT_JOININGDATE": "join_date",
+			"maker": "cust_maker",
+			"maker_dt_stamp": "cust_maker_dt_stamp",
+			"Approver": "cust_Approver",
+			"APPROVER_TIME": "cust_Aprovertime",
+			"Status": "cust_Status",
+			"Approver_statement": "cust_Approver_statement",
+			"Once_Auth": "cust_Once_Auth",
+			"countRow": "countRow"
+		},
+		"VW_PRACTIONER_PROJECT_MAPPING": {
+			"PROJECTID": "projectid",
+			"PROJECTNAME": "projectname",
+			"START_DATE": "startdate",
+			"END_DATE": "enddate",
+			"STATUS": "status"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "PRACTIONAL_MAPPING",
+			"PRACTIONAL_MAPPING": "PRACT_ID"
+		},
+		"DYNAMIC_TABLE_RELATION": {
+			"DYNAMIC_TABLE1": "PRACTIONER_PROJECT_MAPPING",
+			"PRACTIONER_PROJECT_MAPPING": "PRACT_ID"
+		}
+	}
+}

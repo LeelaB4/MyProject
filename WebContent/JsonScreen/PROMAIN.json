@@ -1,0 +1,38 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"projectmaintenance2"
+	],
+	"BLOCK": {
+		"BLK_projectmaintenance2": {
+			"PROJECTID": "PROJECTID",
+			"PROJECTNAME": "ProjectName",
+			"OWNER_EMAIL": "ownerEmail",
+			"OWNERS": "owner",
+			"DEPARTMENT": "department",	
+			"PROJECT_MANAGER": "ProjectManager",
+			"ENDDATE": "end-date",
+			"PADMIN": "Projectadmin",
+			"PADMINEMAIL": "Projectadminmail",
+			"MASTER_PROJECTID": "mastprojid",
+			"APPROVER_STATEMENT": "cust_Approver_statement",
+			"STATUS": "cust_Status",
+			"MAKER_DT_STAMP": "cust_maker_dt_stamp",
+			"MAKER": "cust_maker",
+			"STARTDATE": "start-date",
+			"APPROVER": "cust_Approver",
+			"APROVERTIME": "cust_Aprovertime",
+			"STATUS1": "status",
+			"CLIENTID": "ClientID",
+			"CLIENTName": "ClientName",
+			"Once_Auth": "cust_Once_Auth",
+	    	"PMEMAIL":"ProjectManagerEmail"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "projectmaintenance2",
+			"projectmaintenance2": "PROJECTID"
+		}
+	}
+}

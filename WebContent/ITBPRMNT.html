@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="ITBPRMNT1.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body>
+	<script type="text/javascript" src="ITBPRMNT.js">
+</script>
+
+
+
+	<p id="text"
+		style="margin-right: -120px; position: absolute; left: 16px; color: white; top: -9px;
+	/* opacity: 1.7; */ z-index: 1;">Project Maintenance</p>
+
+
+
+
+
+	<div class="WNDtitlebar" id="WNDtitlebar">
+		<b class="BTNicon"><span class="ICOflexcube"></span></b>
+		<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+
+
+		<div class="WNDbuttons">
+			<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+				onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+			</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+				onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+			</a>
+			<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+				<a class="WNDmin" href="#" title="Minimize"
+					onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+			</button>
+
+
+
+		</div>
+	</div>
+
+
+
+	<!-- <div id="drag"> -->
+	<header id="header">
+
+
+		<div class="button_list" style="margin-top: 19px;">
+			<button id="NewId" class="button" type="button" value="New"
+				onclick=" enbFilds();createNew();resetValues();readOnlyf();getDataFooter(); "
+				onmousedown="">New</button>
+
+
+
+			<button id="Id" class="button" type="button" value="Query"
+				onclick="createBTN(); resetValues();" onmousedown="">Query</button>
+
+
+
+			<button id="ModifyId" class="button" type="button" value="Modify"
+				name="ModifyName"
+				onclick="modifybtnEnable(); enbFilds();samebtnSave();modifybtn();"
+				onmousedown="">Modify</button>
+			<button id="DeleteId" class="button" type="button" value="Delete"
+				name="DeleteName" onclick="validateDelet();  formDisable();"
+				onmousedown="">Delete</button>
+			<button id="CloseId" class="button" type="button" value="Close"
+				onclick="CloseAcc();" onmousedown="">Close</button>
+			<button id="ApprovalId" class="button" type="button" value="Approval"
+				onclick="approveData();" onmousedown="">Approval</button>
+			<button id="ReopenId" class="button" type="button" value="Reopen"
+				onclick="reopenEnable(); reOpen();" onmousedown="">Reopen</button>
+			<br>
+			<button id="buttonExec" class="button" type="button"
+				value="buttonExec" onclick="getCustomerDetails('GET');enableNew(); "
+				onmousedown="">Execute</button>
+			<button type="button" id="buttonSave" class="button"
+				value="buttonSave" onclick="validateEmail();" onmousedown="">Save</button>
+
+		</div>
+		<!-- <div id="create_btn"></div>
+<div id="create_new"></div> -->
+	</header>
+
+	<!-- 	<form action="UserMaintenancePost"> -->
+
+
+	<div class="frame1">
+		<iframe src="" id="f1"></iframe>
+		<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+					<a class="WNDmin" href="#" title="Minimize"
+						onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+				</button>
+
+
+
+			</div>
+		</div>
+	</div>
+	<div
+		style="top: 1;
+	/* margin-top: 0px; */ float: both; flex-grow: inherit; position: absolute; top: 115px; margin-bottom :5px;margin-left: 52px;">
+
+ 
+
+		<label id="LOVL" style="color: red;">Project code *</label> <input
+			type="text" id="proj_code" autocomplete="off" /> <img id="imgLov"
+			onclick="frameinWin('LOV_ITBPRMNT','ITBPRMNT','List of Values Customer No');insertData('proj_code','proj_name')"
+			src="Img/searcher.png"
+			width="20" height="20" style="position:fixed; margin-left:0px; margin-top:0px; />
+
+ 
+ 
+		  <div id="fetchData_div"> 
+		 
+        <!-- <button id="fetchbtn" class="button" type="button"
+				onclick="getCustomerDetails('UserMaintenanceModify')" onmousedown="">Fetch Data</button>  -->
+				 
+</div>
+<br>
+
+ 
+
+		<div id="filedText">
+        <div id="fields" style=" margin-top: 115px; margin-left: 54px;">
+            <label>Project Name:</label> <input type="text" id="proj_name" disabled
+				class="disabled-input" autocomplete="off">
+<!-- <br> <label>DOB :</label> -->
+<!-- <input type="text" id="cust_dob" required /> -->
+<!-- 	<input type="text" id="cust_dob" onclick="" />  -->
+<!-- <input type="date" id="dt" onchange="mydate1();" /> -->
+
+                <br> <label>Application Name:</label> <input type="text"
+				id="app_name" disabled class="disabled-input"
+				autocomplete="off"> 
+				<br> 
+				
+				<label>Application Version:</label> <input
+				type="text" id="app_version" disabled class="disabled-input"
+				autocomplete="off">
+				 <br>
+				 
+				  <label>Application type:</label> <input
+				type="email" id="app_type" disabled class="disabled-input"
+				autocomplete="off">
+				 <br> 
+				 
+				 <label>Application url:</label> 
+				 <input type="text" id="app_url" disabled class="disabled-input" autocomplete="off">
+				 
+				 <br>
+				  <label>Browsers Supported:</label> 
+				  
+				  <label>Browser Edge:</label> 
+
+                  <input type="checkbox" id="Edge"  class="disabled-input"
+										autocomplete="off" style="margin-top: 9px;"></input>
+									<input type="hidden" id="Edge1" class="disabled-input"
+										autocomplete="off"></input>
+				<br>
+				
+                <label style="margin-left: 90px;">Browser Chrome:</label>
+                
+                <input type="checkbox" id="Chrome" class="disabled-input"
+										autocomplete="off" style="margin-top: 9px;"></input>
+									<input type="hidden" id="Chrome1" class="disabled-input"
+										autocomplete="off"></input>
+			   
+			   <br>
+			   <label style="margin-left: 90px;">Browser Firefox:</label>
+			   
+			   <input type="checkbox" id="Firefox"  class="disabled-input"
+										autocomplete="off" style="margin-top: 9px;"></input>
+									<input type="hidden" id="Firefox1" class="disabled-input"
+										autocomplete="off"></input>
+										
+				<br>
+				
+				<label style="margin-left: 90px;">Browser Safari:</label>
+				
+				<input type="checkbox" id="Safari" class="disabled-input"
+										autocomplete="off" style="margin-top: 9px;"></input>
+									<input type="hidden" id="Safari1" class="disabled-input"
+										autocomplete="off"></input>
+								
+			   
+             
+				<br>
+				<label style="margin-left: 90px;">Browser Opera:</label>
+				
+				<input type="checkbox" id="Opera"  class="disabled-input"
+										autocomplete="off" style="margin-top: 9px;"></input>
+									<input type="hidden" id="Opera1" class="disabled-input"
+										autocomplete="off"></input>
+										
+				<br>
+				
+				<label >Others:</label>
+				
+				<input type="text" id="Others" class="disabled-input"
+										autocomplete="off"></input>
+</div>
+<!-- 
+<div id="role">
+<div id="screen">
+<h2 class="hh4">User Role Mapping</h2>
+
+<button class="BTNimg" name="cmdAddRow_BLK_USERROLE" id="cmdAddRow_BLK_USERROLE" tabindex="-1" onclick="fn('BLK_USERROLE')" title="Add Row">
+<span tabindex="-1" class="ICOadd"><span class="LBLinv">Add Row</span></span></button>
+<button class="BTNimg" name="cmdDelRow_BLK_USERROLE" id="cmdDelRow_BLK_USERROLE" tabindex="-1" onclick="fnDeleteRow('BLK_USERROLE')" title="Delete Row">
+<span tabindex="-1" class="ICOremove"><span class="LBLinv">Delete Row</span></span></button>
+</div>
+
+</div>
+				 -->
+
+
+
+</div>
+
+
+ 
+
+<iframe id="frameCl"></iframe>
+</div>
+
+
+
+
+
+		<iframe id="frameCl"></iframe>
+	</div>
+
+
+
+
+
+	<footer id="footer">
+		<div id="field" style="margin-bottom: 4px; margin-left: 73px;">
+
+
+
+			<label class="LBLstd" id="maker" for="1">Maker: </label> <input
+				class="TXTstd1" name="-1" id="cust_maker" type="text" value="">
+
+
+
+
+
+			<label class="LBLstd" id="Approver" for="1" readonly>Approver:</label>
+			<input class="TXTstd1" name="-1" id="cust_Approver" type="text"
+				value=""> <label class="LBLstd" id="Status" for="1">Status:</label>
+			<input class="TXTstd1" name="-1" id="cust_Status" type="text"
+				value=""> <label class="LBLstd" id="Once_auth" for="1">Once
+				Auth:</label> <input class="TXTstd1" name="-1" id="cust_Once_Auth1"
+				type="checkbox" onClick="disableCheckbox(this); "style=" margin-top: 8px;" value=""> <input
+				class="TXTstd1" name="-1" id="cust_Once_Auth" type="text" value=""
+				hidden> <br> <label class="LBLstd" id="makerDT" for="1">Maker
+				DT stamp:</label> <input class="TXTstd" name="-1" id="cust_maker_dt_stamp"
+				type="text" value=""> <label class="LBLstd" id="Aprovertime"
+				for="1">Aprover DT stamp:</label> <input class="TXTstd1" name="-1"
+				id="cust_Aprovertime" type="text" value=""> <label
+				class="LBLstd" id="Aprovertime" for="1">Approver status:</label> <input
+				class="TXTstd1" name="-1" id="cust_Approver_statement" type="text"
+				value="">
+		</div>
+
+
+
+		<button id="cancel" class="cancel_button" type="button"
+			onclick="window.location.reload();" onmousedown=""
+			style="position: absolute;right: 113px;bottom: 67px;background: #0e7585;border: 1px;height: 24px;width: 55px;color: white;">Cancel</button>
+	</footer>
+</body>
+</html>

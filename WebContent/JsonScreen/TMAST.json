@@ -1,0 +1,27 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"ASSET_MAINTENANCE"
+    ],
+	"BLOCK": {
+		"BLK_ASSET_MAINTENANCE": {
+			"asset_no": "asset_no",
+			"ASSET_NAME": "asset_name",
+			"ASSET_TYPE": "asset_type",
+			"SERIAL_NO": "serial_no",
+			"maker": "maker",
+			"maker_dt_stamp": "maker_dt_stamp",
+			"Approver": "Approver",
+			"APROVERTIME": "Aprovertime",
+			"Status": "Status",
+			"Approver_statement": "Approver_statement",
+			"Once_Auth": "Once_Auth"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "ASSET_MAINTENANCE",
+			"ASSET_MAINTENANCE": "asset_no"
+		}
+	}
+}

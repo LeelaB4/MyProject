@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="PROMAIN1.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+</head>
+<body>
+	<script type="text/javascript" src="PROMAIN1.js">
+</script>
+
+
+
+
+
+	<p id="text"
+		style="margin-right: -120px; position: absolute; left: 16px; color: white; top: -9px;
+	/* opacity: 1.7; */ z-index: 1;">Project
+		Maintenance</p>
+
+
+
+
+
+
+
+	<div class="WNDtitlebar" id="WNDtitlebar">
+		<b class="BTNicon"><span class="ICOflexcube"></span></b>
+		<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+
+
+
+
+		<div class="WNDbuttons">
+			<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+				onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+			</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+				onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+			</a>
+			<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+				<a class="WNDmin" href="#" title="Minimize"
+					onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+			</button>
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+	<!-- <div id="drag"> -->
+	<header id="header">
+
+
+
+
+
+		<div class="button_list" style="margin-top: 19px;">
+			<button id="NewId" class="button" type="button" value="New"
+				onclick=" enbFilds();createNew();resetValues();readOnlyf();getDataFooter(); "
+				onmousedown="">New</button>
+
+
+
+
+
+			<button id="Id" class="button" type="button" value="Query"
+				onclick="createBTN(); resetValues();" onmousedown="">Query</button>
+
+
+
+
+
+			<button id="ModifyId" class="button" type="button" value="Modify"
+				name="ModifyName"
+				onclick="modifybtnEnable(); enbFilds();samebtnSave();modifybtn();"
+				onmousedown="">Modify</button>
+			<button id="DeleteId" class="button" type="button" value="Delete"
+				name="DeleteName" onclick="validateDelet();  formDisable();"
+				onmousedown="">Delete</button>
+			<button id="CloseId" class="button" type="button" value="Close"
+				onclick="CloseAcc();" onmousedown="">Close</button>
+			<button id="ApprovalId" class="button" type="button" value="Approval"
+				onclick="approveData();" onmousedown="">Approval</button>
+			<button id="ReopenId" class="button" type="button" value="Reopen"
+				onclick="reopenEnable(); reOpen();" onmousedown="">Reopen</button>
+			<br>
+			<button id="buttonExec" class="button" type="button"
+				value="buttonExec" onclick="getCustomerDetails('GET');enableNew(); "
+				onmousedown="">Execute</button>
+			<button type="button" id="buttonSave" class="button"
+				value="buttonSave" onclick="validateEmail();" onmousedown="">Save</button>
+
+
+
+		</div>
+		<!-- <div id="create_btn"></div>
+<div id="create_new"></div> -->
+	</header>
+
+
+
+	<!-- 	<form action="UserMaintenancePost"> -->
+
+
+
+
+
+	<div class="frame1">
+		<iframe src="" id="f1"></iframe>
+		<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+
+
+
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+					<a class="WNDmin" href="#" title="Minimize"
+						onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+				</button>
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+	<div
+		style="top: 1;
+	/* margin-top: 0px; */ float: both; flex-grow: inherit; position: absolute; top: 113px; margin-bottom: 5px">
+
+		<label id="LOVL" style="color: red;">Project Id *</label> <input
+			type="text" id="PROJECTID" autocomplete="off" /> <img id="imgLov"
+			onclick="frameinWin('LOV_PROMAIN','PROMAIN','List of Values Customer No');insertData('PROJECTID')"
+			src="Img/lov_search.png" width="20" height="20" />
+
+		<div id="fetchData_div">
+			<button id="fetchbtn" class="button" type="button"
+				onclick="getCustomerDetails('UserMaintenanceModify')" onmousedown="">
+			</button>
+		</div>
+		<br>
+
+		<div id="filedText">
+			<div id="fields">
+				<label>Client Id:</label> <input type="text" id="Client Id" disabled
+					class="disabled-input" autocomplete="off">
+				<!-- <br> <label>DOB :</label> -->
+				<!-- <input type="text" id="cust_dob" required /> -->
+				<!-- 	<input type="text" id="cust_dob" onclick="" />  -->
+				<!-- <input type="date" id="dt" onchange="mydate1();" /> -->
+				<br> <label style="color: red;">Owner *:</label> <input
+					type="password" id="owner" disabled class="disabled-input"
+					autocomplete="off"> <br> <label>Project
+					Manager:</label> <input type="text" id="ProjectManager" disabled
+					class="disabled-input" autocomplete="off"> <br> <label
+					style="color: red;">Start date *:</label> <input type="date"
+					id="start-date" disabled class="disabled-input" autocomplete="off">
+				<br> <label>Project Admin:</label> <input type="text"
+					id="Projectadmin" disabled class="disabled-input"
+					autocomplete="off"> <br> <label>Department:</label> <input
+					type="text" id="department" disabled class="disabled-input"
+					autocomplete="off"> <br> <label>Master Project
+					ID:</label> <input type="text" id="mastprojid" disabled
+					class="disabled-input" autocomplete="off">
+				<!-- <input type="text" id="cust_phone" disabled class="disabled-input" autocomplete="off"> <br> -->
+				<!-- <input type="tel" id="cust_phone"  name="phone" maxlength="10"  pattern="\d{10}" title="Please enter exactly 10 digits"  disabled class="disabled-input" autocomplete="off"> <br> -->
+
+			</div>
+		</div>
+
+
+		<iframe id="frameCl"></iframe>
+	</div>
+
+
+
+
+
+	<div
+		style="top: 1; float: both; flex-grow: inherit; position: absolute; top: 118px; margin-bottom: 5px; margin-left: 357px">
+
+		<label style="color: red;">Project Name *:</label> <input type="text"
+			id="ProjectName" disabled class="disabled-input" autocomplete="off">
+
+
+		<br>
+
+		<div id="filedText">
+			<div id="fields">
+				<label>Client Id:</label> <input type="text" id="ClientID" disabled
+					class="disabled-input" autocomplete="off">
+				<!-- <br> <label>DOB :</label> -->
+				<!-- <input type="text" id="cust_dob" required /> -->
+				<!-- 	<input type="text" id="cust_dob" onclick="" />  -->
+				<!-- <input type="date" id="dt" onchange="mydate1();" /> -->
+				<br> <label style="color: red;">Owner Email*:</label> <input
+					type="password" id="ownerEmail" disabled class="disabled-input"
+					autocomplete="off"> <br> <label>Project
+					ManagerEmail:</label> <input type="text" id="ProjectManagerEmail" disabled
+					class="disabled-input" autocomplete="off"> <br> <label>End
+					Date:</label> <input type="date" id="end-date" disabled
+					class="disabled-input" autocomplete="off"> <br> <label>Project
+					Admin Email:</label> <input type="text" id="Projectadminmail" disabled
+					class="disabled-input" autocomplete="off"> <br> <label
+					style="color: red;">Project Status *:</label> <input type="hidden"
+					id="status" disabled class="disabled-input" autocomplete="off">
+
+				<select id="status" class="disabled-input"
+					style="margin-inline: 9px; width: 154px; margin-top: 5px;">
+					<option></option>
+					<option type="text" id="type-1">Active</option>
+					<option type="text" id="type-2">Hold</option>
+				</select>
+
+				<!-- <input type="text" id="cust_phone" disabled class="disabled-input" autocomplete="off"> <br> -->
+				<!-- <input type="tel" id="cust_phone"  name="phone" maxlength="10"  pattern="\d{10}" title="Please enter exactly 10 digits"  disabled class="disabled-input" autocomplete="off"> <br> -->
+
+			</div>
+		</div>
+
+
+		<iframe id="frameCl"></iframe>
+	</div>
+
+
+
+
+
+
+	<iframe id="frameCl"></iframe>
+	</div>
+
+
+
+
+
+
+
+	<iframe id="frameCl"></iframe>
+	</div>
+
+
+
+
+
+
+
+	<footer id="footer">
+		<div id="field">
+
+
+
+
+
+			<label class="LBLstd" id="maker" for="1">Maker: </label> <input
+				class="TXTstd1" name="-1" id="cust_maker" type="text" value="">
+
+
+
+
+
+
+
+			<label class="LBLstd" id="Approver" for="1" readonly>Approver:</label>
+			<input class="TXTstd1" name="-1" id="cust_Approver" type="text"
+				value=""> <label class="LBLstd" id="Status" for="1">Status:</label>
+			<input class="TXTstd1" name="-1" id="cust_Status" type="text"
+				value=""> <label class="LBLstd" id="Once_auth" for="1">Once
+				Auth:</label> <input class="TXTstd1" name="-1" id="cust_Once_Auth1"
+				type="checkbox" onClick="disableCheckbox(this);" value=""> <input
+				class="TXTstd1" name="-1" id="cust_Once_Auth" type="text" value=""
+				hidden> <br> <label class="LBLstd" id="makerDT" for="1">Maker
+				DT stamp:</label> <input class="TXTstd" name="-1" id="cust_maker_dt_stamp"
+				type="text" value=""> <label class="LBLstd" id="Aprovertime"
+				for="1">Aprover DT stamp:</label> <input class="TXTstd1" name="-1"
+				id="cust_Aprovertime" type="text" value=""> <label
+				class="LBLstd" id="Aprovertime" for="1">Approver status:</label> <input
+				class="TXTstd1" name="-1" id="cust_Approver_statement" type="text"
+				value="">
+		</div>
+
+
+
+
+
+		<button id="cancel" class="cancel_button" type="button"
+			onclick="window.location.reload();" onmousedown=""
+			style="position: absolute; right: 87px; bottom: 0px; background: #0e7585; border: 1px; height: 21px; width: 55px; color: white;">Cancel</button>
+	</footer>
+</body>
+</html>

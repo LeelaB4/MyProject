@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="TMPRACTM.xsl"?>
+<div>
+<header>
+<button1>New</button1>
+<button2>Query</button2>
+<button3>Modify</button3>
+<button4>Delete</button4>
+<button5>Close</button5>
+<button6>Approval</button6>
+<button7>Reopen</button7>
+<br></br>
+<button8>Save</button8>
+<button9>Execute</button9> 
+</header>
+
+<tbody>
+<field1>EMP ID *:</field1>
+<field2>PRACT NAME :</field2>
+<field3>PRACT TYPE:</field3>
+<field4>PRACT ORG</field4>
+<field5>PRACT EMAIL:</field5>
+<field6>PRACT MOBILE:</field6>
+<field7>PRACT MGR:</field7>
+<field8>JOINING  DATE:</field8>
+<field9>EXIT  DATE:</field9>
+<field10>IN NOTICE</field10>
+</tbody>
+
+
+
+ <footer>
+<type1>Maker:</type1>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type5>Maker DT stamp:</type5>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+<type8>Cancel</type8>
+</footer>
+</div>

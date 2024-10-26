@@ -1,0 +1,35 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"TAMB_PROJECT_MASTER"
+	],
+	"BLOCK": {
+		"BLK_TAMB_PROJECT_MASTER": {
+			"PROJ_CODE": "proj_code",
+			"PROJ_NAME": "proj_name",
+			"APP_NAME": "app_name",
+			"APP_VERSION": "app_version",
+			"APP_TYPE": "app_type",
+			"APP_URL": "app_url",
+			"BROW_EDG": "Edge1",
+			"BROW_CHR":"Chrome1",
+			"BROW_FIR":"Firefox1",
+			"BROW_SAF":"Safari1",
+			"BROW_OPE":"Opera1",
+			"OTHERS":"Others",
+			"CUST_MAKER": "cust_maker",
+			"CUST_MAKER_DT_STAMP": "cust_maker_dt_stamp",
+			"CUST_APPROVER": "cust_Approver",
+			"CUST_APROVERTIME": "cust_Aprovertime",
+			"CUST_STATUS": "cust_Status",
+			"CUST_APPROVER_STATEMENT": "cust_Approver_statement",
+			"CUST_ONCE_AUTH": "cust_Once_Auth"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "TAMB_PROJECT_MASTER",
+			"TAMB_PROJECT_MASTER": "PROJ_CODE"
+		}
+	}
+}

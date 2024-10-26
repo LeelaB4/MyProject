@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link href="FLEXCUBE.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<script type="text/javascript" src="TMAST.js"></script>
+
+	<p id="text"
+		style="margin-right: -120px; position: absolute; left: 16px; color: white; top: -9px;
+	/* opacity: 1.7; */ z-index: 1;">Asset Maintenance</p>
+
+
+	<div class="WNDtitlebar" id="WNDtitlebar">
+		<b class="BTNicon"><span class="ICOflexcube"></span></b>
+		<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+		<div class="WNDbuttons">
+			<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+				onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+			</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+				onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+			</a>
+			<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+				<a class="WNDmin" href="#" title="Minimize"
+					onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+			</button>
+
+		</div>
+	</div>
+
+	<!-- <div id="drag"> -->
+	<header id="header">
+
+
+		   
+
+		<div class="button_list">
+			<button id="NewId" class="button" type="button" value="New"
+				onclick=" enbFilds();createNew();resetValues();readOnlyf();getDataFooter();"
+				onmousedown="">New</button>
+
+			<button id="Id" class="button" type="button" value="Query"
+				onclick="createBTN(); resetValues();" onmousedown="">Query</button>
+
+			<button id="ModifyId" class="button" type="button" value="Modify"
+				name="ModifyName"
+				onclick="modifybtnEnable(); enbFilds();samebtnSave();modifybtn();"
+				onmousedown="">Modify</button>
+			<button id="DeleteId" class="button" type="button" value="Delete"
+				name="DeleteName" onclick="validateDelet();  formDisable();"
+				onmousedown="">Delete</button>
+			<button id="CloseId" class="button" type="button" value="Close"
+				onclick="CloseAcc();" onmousedown="">Close</button>
+			<button id="ApprovalId" class="button" type="button" value="Approval"
+				onclick="approveData();" onmousedown="">Approval</button>
+			<button id="ReopenId" class="button" type="button" value="Reopen"
+				onclick="reopenEnable(); reOpen();" onmousedown="">Reopen</button>
+			<br>
+			<button id="buttonExec" class="button" type="button"
+				value="buttonExec" onclick="getCustomerDetails('GET');enableNew(); "
+				onmousedown="">Execute</button>
+			<button type="button" id="buttonSave" class="button"
+				value="buttonSave" onclick="validateEmail();" onmousedown="">Save</button>
+
+
+
+
+
+
+
+		</div>
+
+		<!-- <div id="create_btn"></div>
+		<div id="create_new"></div> -->
+	</header>
+
+
+
+	<!-- 	<form action="UserMaintenancePost"> -->
+
+
+
+
+
+	<div class="frame1">
+		<iframe src="" id="f1"></iframe>
+		<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)">
+					<a class="WNDmin" href="#" title="Minimize"
+						onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a>
+				</button>
+
+			</div>
+		</div>
+	</div>
+	<div
+		style="top: 1;
+	/* margin-top: 0px; */ float: both; flex-grow: inherit; position: absolute; top: 113px; margin-bottom: 5px">
+
+		<label id="LOVL" style="color: red;">ASSET NO *</label> <input
+			type="text" id="asset_no" autocomplete="off" />  <img id="imgLov" onclick="frameinWin('LOV_TMAST','TMAST','List of Values ');insertData('asset_no')" src="Img/searcher.png" width="20" height="20" /> 
+
+		<div id="fetchData_div">
+			<button id="fetchbtn" class="button" type="button"
+				onclick="getCustomerDetails('UserMaintenanceModify')" onmousedown="">Fetch
+				Data</button>
+		</div>
+		<br>
+
+		<div id="filedText">
+			<div id="fields">
+				<label>ASSET NAME :</label> <input type="text" id="asset_name"
+					disabled class="disabled-input" autocomplete="off"> <br>
+					<label>ASSET TYPE :</label> <input type="text" id="asset_type"
+					disabled class="disabled-input" autocomplete="off"> <br>
+					<label>SERIAL NO :</label> <input type="text" id="serial_no"
+					disabled class="disabled-input" autocomplete="off"> <br>
+			
+			</div>
+		</div>
+
+
+		<iframe id="frameCl"></iframe>
+	</div>
+	</div>
+
+
+
+	<footer id="footer">
+		<div id="field">
+
+			<label class="LBLstd" id="maker" for="1">Maker: </label> <input
+				class="TXTstd1" name="-1" id="maker" type="text" value="">
+
+
+			<label class="LBLstd" id="Approver" for="1" readonly>Approver:</label>
+			<input class="TXTstd1" name="-1" id="Approver" type="text"
+				value=""> <label class="LBLstd" id="Status" for="1">Status:</label>
+			<input class="TXTstd1" name="-1" id="Status" type="text"
+				value=""> <label class="LBLstd" id="Once_auth" for="1">Once
+				Auth:</label> <input class="TXTstd1" name="-1" id="Once_Auth1"
+				type="checkbox" onClick="disableCheckbox(this);" value=""> <input
+				class="TXTstd1" name="-1" id="Once_Auth" type="text" value=""
+				hidden> <br> <label class="LBLstd" id="makerDT" for="1">Maker
+				DT stamp:</label> <input class="TXTstd" name="-1" id="maker_dt_stamp"
+				type="text" value=""> <label class="LBLstd" id="Aprovertime"
+				for="1">Aprover DT stamp:</label> <input class="TXTstd1" name="-1"
+				id="Aprovertime" type="text" value=""> <label
+				class="LBLstd" id="Aprovertime" for="1">Approver status:</label> <input
+				class="TXTstd1" name="-1" id="Approver_statement" type="text"
+				value="">
+		</div>
+
+		<button id="cancel" class="cancel_button" type="button"
+			onclick="window.location.reload();" onmousedown=""
+			style="position: absolute; right: 87px; bottom: 0px; background: #0e7585; border: 1px; height: 21px; width: 55px; color: white;">Cancel</button>
+	</footer>
+
+</body>
+</html>

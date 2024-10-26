@@ -1,0 +1,31 @@
+{
+	"table_name": "sttm_customers",
+	"fields": [
+		"CUST_NO",
+		"NAME",
+		"DOB",
+		"SALARY",
+		"DEPT",
+		"MAKER",
+		"MAKER_DT_STAMP",
+		"APPROVER",
+		"APROVERTIME",
+		"STATUS",
+		"APPROVER_STATEMENT",
+		"ONCE_AUTH"
+	],
+	"fileds2" :[
+	    "custid",
+		"cust_name",
+		"cust_dob",
+		"cust_salary",
+		"cust_dept",
+		"cust_maker",
+		"cust_maker_dt_stamp",
+		"cust_Approver",
+		"cust_Aprovertime",
+		"cust_Status",
+		"cust_Approver_statement",
+		"cust_Once_Auth"
+	]
+}

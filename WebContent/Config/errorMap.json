@@ -1,0 +1,18 @@
+{"ERRORMAP":[
+{"MOD-1001":
+{
+"SCREEN":"INFRA",
+"ERROR":"MOD-1001",
+"LANG":"ENG",
+"DESC":"Invalid User"
+}},
+
+{"MOD-1002":
+{
+"SCREEN":"INFRA",
+"ERROR":"MOD-1002",
+"LANG":"ENG",
+"DESC":"Invalid Password"
+}}
+]
+}

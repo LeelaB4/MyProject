@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ 
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<!-- <link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+jQuery library
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+
+Popper JS
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+Latest compiled JavaScript
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<style type="text/css">
+#footer {
+	padding: 0px;
+	margin-top: 40px;
+	/* border: 1px solid black; */
+	width: 0px;
+	position: absolute;
+	width: 100%;
+	b: auto;
+	bottom: 1px;
+	background: #e6f2f4;
+	left: 1px;
+}
+
+#f1 {
+	height: auto;
+	width: auto;
+	border: 0px FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 100%;
+	visibility: visible;
+	margin: 0px;
+	padding: 0px;
+	BACKGROUND: #fff;
+	border: 0px;
+	width: 680px;
+	height: 485px;
+	display: none;
+	position: absolute;
+	top: 91px;
+	border: 1px solid black;
+	z-index: 1;
+}
+
+.WNDtitlebar {
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 100%;
+	TEXT-ALIGN: left;
+	PADDING-BOTTOM: 0px;
+	BORDER-RIGHT-STYLE: none;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	left: 0px;
+	PADDING-RIGHT: 0px;
+	BORDER-TOP-STYLE: none;
+	CLEAR: both;
+	BORDER-LEFT-STYLE: none;
+	PADDING-TOP: 0px;
+	background: #557176;
+	border-bottom: 1px solid #7a9498;
+	cursor: move;
+	HEIGHT: 1.7em;
+	position: absolute;
+	/* top: -102px; */
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.BTNicon {
+	TEXT-ALIGN: left;
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	COLOR: #000;
+	FONT-SIZE: 0.74em;
+	FONT-WEIGHT: normal;
+	BORDER-BOTTOM-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	WIDTH: 22px;
+	BORDER-TOP-STYLE: none;
+	BACKGROUND: none transparent scroll repeat 0% 0%;
+	HEIGHT: 22px;
+	VERTICAL-ALIGN: middle;
+	BORDER-LEFT-STYLE: none;
+	CURSOR: default;
+	padding: 0px !important;
+	margin: 0px !important;
+	display: none;
+	float: left;
+}
+
+.ICOflexcube {
+	TEXT-ALIGN: left;
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	COLOR: #000;
+	FONT-SIZE: 0.74em;
+	FONT-WEIGHT: normal;
+	MARGIN: 0px;
+	CURSOR: auto;
+	float: left;
+	BACKGROUND:
+		url("data:image/gif;base64,R0lGODlhFgAWAPcAAC1tnIyNkvz9/hA0Zd7e4IWeu5m62BQwT7fL7ODm8Cc8ZxQvZgEvaxxRgIiu0/r7+6fD3srU6r7c6gM8df///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABUALAAAAAAWABYARwiBACsIHEiwoEGDEgRQWMjQwISHEwAcJChhIYEBASZqlAAxokaBFRmKtKigwMeTKAkCkJgSpEIKHCGyRPhyZEOIJg+GFEngQMaWFTACHXoSwMOZKSsi6Ih0ooQHIiEwdVpzpEOIDQrutMnQAYOcCLlSSCD05FYCC362lBChLNG3QwMCADs=")
+		no-repeat;
+	PADDING-BOTTOM: 0px;
+	TEXT-INDENT: -5em;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+	MARGIN-LEFT: 1px;
+	width: 22px;
+	height: 21px;
+	display: none;
+}
+
+.WNDtitletxt {
+	TEXT-ALIGN: left;
+	cursor: move;
+	padding: 0px;
+	MARGIN: 0px;
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	WHITE-SPACE: nowrap;
+	FLOAT: left;
+	COLOR: #fff;
+	OVERFLOW: hidden;
+	PADDING-TOP: 0.3em;
+	font-size: .9em;
+	font-weight: normal;
+	padding-left: 5px;
+}
+
+.WNDbuttons {
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 100%;
+	TEXT-ALIGN: left;
+	cursor: move;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH: 60px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	FLOAT: right;
+	HEIGHT: 1.5em;
+	PADDING-TOP: 0px;
+}
+
+.WNDcls {
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 100%;
+	TEXT-ALIGN: left;
+	margin: 0px;
+	padding: 0px;
+	background:
+		url("data:image/gif;base64,R0lGODlhEQARAPAAAP///////yH5BAEAAAEALAAAAAARABEAQAIjjI+pB70PmUMNqJpw3NLqh33cSAbWBU6mulRsKl5qzLSlUgAAOw==")
+		no-repeat 50% 50%;
+	BORDER-BOTTOM-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	DISPLAY: block;
+	BACKGROUND-REPEAT: no-repeat;
+	BORDER-TOP-STYLE: none;
+	FLOAT: right;
+	BORDER-LEFT-STYLE: none;
+	WIDTH: 28px;
+	HEIGHT: 26px;
+	margin-right: 0px;
+}
+
+.WNDmax {
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 100%;
+	TEXT-ALIGN: left;
+	margin: 0px;
+	padding: 0px;
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAJklEQVR42mP4//8/A6WYgZqGUAKGuyGkBOioIUPSkIFPbANfFAAACy/VVcwia0gAAAAASUVORK5CYII=)
+		no-repeat 50% 50%;
+	BORDER-BOTTOM-STYLE: none;
+	BORDER-RIGHT-STYLE: none;
+	DISPLAY: block;
+	BACKGROUND-REPEAT: no-repeat;
+	BORDER-TOP-STYLE: none;
+	FLOAT: right;
+	BORDER-LEFT-STYLE: none;
+	WIDTH: 15px;
+	HEIGHT: 26px;
+	margin-right: 0px;
+}
+
+.LBLinv {
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	TEXT-ALIGN: left;
+	margin: 0px;
+	padding: 0px;
+	margin-left: -3px;
+	POSITION: absolute;
+	BACKGROUND: #fff;
+	COLOR: #000;
+	TOP: 0px;
+	OPACITY: 0;
+	HEIGHT: 0px;
+	WIDTH: 0px;
+	font-size: 0px;
+	z-index: -1;
+	LEFT: -300px;
+}
+
+.button {
+	background-color: #f5f5f8;
+	border: none;
+	color: black;
+	padding: 5px 11px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+.button:hover {
+	border-bottom: 4px solid #35b0e3;
+	position: static;
+	/* border-radius: 20px; */
+}
+
+#button {
+	background-color: #557176;
+	border: none;
+	color: white;
+	padding: 7px 13px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+#header {
+	padding: 0px;
+	/*  margin-top: 30px;  */
+	/*   border: 1px solid black; */
+	width: 100%;
+	position: absolute;
+	background: #f5f5f8;
+	height: 9%;
+	left: -1px;
+}
+
+input {
+	border: 1px solid #d9d9d9;
+	background: none;
+	color: #000;
+	padding: 3px;
+	BORDER-BOTTOM: #d7d7d7 1px solid;
+	BORDER-LEFT: none;
+	BORDER-RIGHT: none;
+	BORDER-TOP: none;
+	MARGIN: 0px;
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	VERTICAL-ALIGN: top;
+	box-shadow: none;
+	box-sizing: border-box;
+	font-size: .8em;
+	max-width: 246.746666666667px;
+}
+
+.TXTstd1 {
+	border: 1px solid #d9d9d9;
+	background: none;
+	color: #000;
+	padding: 3px;
+	BORDER-BOTTOM: #d7d7d7 1px solid;
+	BORDER-LEFT: none;
+	BORDER-RIGHT: none;
+	BORDER-TOP: none;
+	BORDER-BOTTOM: none;
+	MARGIN: 0px;
+	FONT-FAMILY: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	VERTICAL-ALIGN: top;
+	box-shadow: none;
+	box-sizing: border-box;
+	font-size: .8em;
+	max-width: 246.746666666667px;
+	WHITE-SPACE: nowrap;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	text-align: right;
+}
+
+#fetchData_div {
+	position: absolute;
+	margin-top: -22px;
+	margin-left: 353px;
+}
+
+#dt {
+	text-indent: -510px;
+	height: 21px;
+	width: 23px;
+}
+
+
+
+#frameCl{
+display:none;
+position: absolute;
+
+    top: 84px;
+    height: 100%;
+    width: 150%;
+}
+
+#roleScreen{
+ margin-left: 542px;
+    margin-top: -214px;
+   position: absolute;
+/* background: #f5f5f8; */
+height: 345px;
+ width: 425px; 
+  border: 1px solid #ccc;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+#scroll{
+
+}
+
+#rolepluse{
+/* margin-left: 380px; */
+ overflow: hidden;
+  /* border: 1px solid #ede2e2; */
+  background-color: #f5f5f8;
+width:100%;
+  height:;
+  margin-top:-7px;
+  
+}
+
+
+#button1{
+
+ background-color: #f5f5f8; /* Green */
+  border: none;
+  color: black;
+ 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width:20px;
+  }
+  
+  #button2{
+  
+ background-color: #f5f5f8; /* Green */
+  border: none;
+  color: black;
+text-size:10px;
+  text-decoration: none;
+  display: inline-block;
+
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    width:20px;
+  }
+
+#button1:hover {
+  background-color: #008CBA;
+  color: #e4e4e4;
+}
+#button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+h3 {
+    display: block;
+    font-size: 0.9em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+ 
+ #table_css{
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #a3bcc1;
+    width: 414px;
+    height: ;
+   color: black;
+   width:100%;
+ }
+
+#dataTable{
+colour:a3bcc1;
+}
+#min{
+    position: absolute;
+    right: 49px;
+    top: 14px;
+    }
+</style>
+</head>
+<body>
+
+	 <p id="text" style="
+    margin-right: -120px;
+    position: absolute;
+    left: 16px;
+    color: white;
+    top: -9px;
+    /* opacity: 1.7; */
+    z-index: 1;
+">User Maintenance</p>
+	
+	
+	<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)"><a class="WNDmin" href="#" title="Minimize" onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a></button>
+				
+			</div>
+		</div>
+	
+	<!-- <div id="drag"> -->
+	<header id="header">
+
+
+		   
+
+		<div class="button_list">
+			<button id="NewId" class="button" type="button" value="New"
+				onclick=" enbFilds();createNew();resetValues();readOnlyf();getDataFooter(); <!-- highletFields(); -->"
+				onmousedown="">New</button>
+
+			<button id="Id" class="button" type="button" value="Query"
+				onclick="createBTN(); resetValues();" onmousedown="">Query</button>
+
+			<button id="ModifyId" class="button" type="button" value="Modify"
+				name="ModifyName"
+				onclick="modifybtnEnable(); enbFilds();samebtnSave();modifybtn();"
+				onmousedown="">Modify</button>
+			<button id="DeleteId" class="button" type="button" value="Delete"
+				name="DeleteName" onclick="validateDelet();  formDisable();" onmousedown="">Delete</button>
+			<button id="CloseId" class="button" type="button" value="Close"
+				onclick="CloseAcc();" onmousedown="">Close</button>
+			<button id="ApprovalId" class="button" type="button" value="Approval"
+				onclick="approveData();" onmousedown="">Approval</button>
+			<button id="ReopenId" class="button" type="button" value="Reopen"
+				onclick="reopenEnable(); reOpen();" onmousedown="">Reopen</button>
+			<br>
+			<button id="buttonExec" class="button" type="button"
+				value="buttonExec"
+				onclick="getCustomerDetails('GET');enableNew(); "
+				onmousedown="">Execute</button>
+			<button type="button" id="buttonSave" class="button"
+				value="buttonSave" onclick="validateEmail();" onmousedown="">Save</button>
+
+
+
+
+
+
+
+		</div>
+
+		<!-- <div id="create_btn"></div>
+		<div id="create_new"></div> -->
+	</header>
+
+
+
+	<!-- 	<form action="UserMaintenancePost"> -->
+
+
+
+
+
+	<div class="frame1">
+		<iframe src="" id="f1"></iframe>
+		<div class="WNDtitlebar" id="WNDtitlebar">
+			<b class="BTNicon"><span class="ICOflexcube"></span></b>
+			<h1 id="titleLOV" class="WNDtitletxt"></h1>
+
+			<div class="WNDbuttons">
+				<a class="WNDcls" href="#" id="WNDbuttons" title="Close"
+					onclick="parent.closeIframe()"> <span class="LBLinv">Close</span>
+				</a> <a class="WNDmax" href="#" id="WNDmaxBTN" title="Maximize"
+					onclick="parent.maximizeFrame(event)"> <span class="LBLinv">Maximize</span>
+				</a>
+				<button id="min" type="button" onclick="parent.minimizeFrame(event)"><a class="WNDmin" href="#" title="Minimize" onclick="parent.minimizeFrame(event)"><span class="LBLinv">Min</span></a></button>
+
+			</div>
+		</div>
+	</div>
+	<div
+		style="top: 1;
+	/* margin-top: 0px; */ float: both; flex-grow: inherit; position: absolute; top: 113px; margin-bottom :5px">
+
+		<label id="LOVL" style="color: red;">User Id *</label> <input
+			type="text" id="cust_id" autocomplete="off" /> <img id="imgLov"
+			onclick="frameinWin('LOV_MODUSER','MODUSER','List of Values Customer No');insertData('cust_id')"
+			src="Img/lov_search.png"
+			width="20" height="20" />
+
+		<div id="fetchData_div">
+			<button id="fetchbtn" class="button" type="button"
+				onclick="getCustomerDetails('UserMaintenanceModify')" onmousedown="">Fetch
+				Data</button>
+		</div>
+		<br>
+
+		<div id="filedText">
+		<div id="fields">
+			<label>User Name:</label> <input type="text" id="cust_name" disabled
+				class="disabled-input" autocomplete="off">
+			<!-- <br> <label>DOB :</label> -->
+			<!-- <input type="text" id="cust_dob" required /> -->
+			<!-- 	<input type="text" id="cust_dob" onclick="" />  -->
+			<!-- <input type="date" id="dt" onchange="mydate1();" /> -->
+			<br> <label>Password:</label> <input type="password"
+				id="cust_password" disabled class="disabled-input"
+				autocomplete="off"> <br> <label>Dept:</label> <input
+				type="text" id="cust_dept" disabled class="disabled-input"
+				autocomplete="off"> <br> <label>Email:</label> <input
+				type="email" id="cust_email" disabled class="disabled-input"
+				autocomplete="off"> <br> <label>Manager:</label> <input
+				type="text" id="cust_manager" disabled class="disabled-input"
+				autocomplete="off"> <br> <label>LDAP:</label> <input
+				type="text" id="cust_ldap" disabled class="disabled-input"
+				autocomplete="off"> <br> <label>Phone:</label>
+			<!-- <input type="text" id="cust_phone" disabled class="disabled-input" autocomplete="off"> <br> -->
+			<!-- <input type="tel" id="cust_phone"  name="phone" maxlength="10"  pattern="\d{10}" title="Please enter exactly 10 digits"  disabled class="disabled-input" autocomplete="off"> <br> -->
+			<input name="mobile" id="cust_phone" type="tel" maxlength="10"
+				minlength="10" disabled class="disabled-input" autocomplete="off"
+				title="Please enter exactly 10 digits" returnfalse;" ><span
+				id=""></span> <br>
+				
+			 <input type="hidden" name="countRow" id="countRow"><br>
+			 </div>
+				<!-- 
+				<div id="role">
+				<div id="screen">
+				<h2 class="hh4">User Role Mapping</h2>
+			    
+				<button class="BTNimg" name="cmdAddRow_BLK_USERROLE" id="cmdAddRow_BLK_USERROLE" tabindex="-1" onclick="fn('BLK_USERROLE')" title="Add Row">
+				<span tabindex="-1" class="ICOadd"><span class="LBLinv">Add Row</span></span></button>
+				<button class="BTNimg" name="cmdDelRow_BLK_USERROLE" id="cmdDelRow_BLK_USERROLE" tabindex="-1" onclick="fnDeleteRow('BLK_USERROLE')" title="Delete Row">
+				<span tabindex="-1" class="ICOremove"><span class="LBLinv">Delete Row</span></span></button>
+				</div>
+				
+				</div>
+				 -->
+				 
+				 
+				 <div id="roleScreen">
+				<div id="box">
+			<div id="messege"></div>
+				
+				<h3>User Role Mapping</h3>
+				 <div id="rolepluse">
+				  <input id="button1" type="button" value="+" onclick="addRow('dataTable')"  > 
+				  <input id="button2"	type="button" value="-" onclick="deleteRow('dataTable')"  >
+				  </div>
+				 </div>
+				  
+			<div  id="roletable">
+			
+			
+				 <TABLE class="table table-hover table-striped" id="dataTable"
+					width="350px" style="width:100%">
+					<thead id="table_css">
+					
+						<th >Check</th>
+						<th>Role Id</th>
+						<th></th>
+						<th>Role Desc</th> 	
+					</thead>
+					<tbody></tbody>
+				</TABLE>
+	
+			</div> 
+			</div>
+			</div>
+			
+
+<iframe id="frameCl"></iframe>
+		</div>
+	</div>
+ 
+	
+
+	<footer id="footer">
+		<div id="field">
+
+			<label class="LBLstd" id="maker" for="1">Maker: </label> <input
+				class="TXTstd1" name="-1" id="cust_maker" type="text" value="">
+
+
+			<label class="LBLstd" id="Approver" for="1" readonly>Approver:</label>
+			<input class="TXTstd1" name="-1" id="cust_Approver" type="text"
+				value=""> <label class="LBLstd" id="Status" for="1">Status:</label>
+			<input class="TXTstd1" name="-1" id="cust_Status" type="text"
+				value=""> <label class="LBLstd" id="Once_auth" for="1">Once
+				Auth:</label> <input class="TXTstd1" name="-1" id="cust_Once_Auth1"
+				type="checkbox" onClick="disableCheckbox(this);" value=""> <input
+				class="TXTstd1" name="-1" id="cust_Once_Auth" type="text" value=""
+				hidden> <br> <label class="LBLstd" id="makerDT" for="1">Maker
+				DT stamp:</label> <input class="TXTstd" name="-1" id="cust_maker_dt_stamp"
+				type="text" value=""> <label class="LBLstd" id="Aprovertime"
+				for="1">Aprover DT stamp:</label> <input class="TXTstd1" name="-1"
+				id="cust_Aprovertime" type="text" value=""> <label
+				class="LBLstd" id="Aprovertime" for="1">Approver
+				status:</label> <input class="TXTstd1" name="-1"
+				id="cust_Approver_statement" type="text" value="">
+		</div>
+		
+		<button id="cancel" class="cancel_button" type="button"
+		onclick="window.location.reload();" onmousedown=""
+		style="position: absolute;right: 87px;bottom: 0px;background: #0e7585;border: 1px;height: 21px;width: 55px;color: white;">Cancel</button>
+	</footer>
+
+	<!-- </div> -->
+	<!-- </form> -->
+
+	<script type="text/javascript">
+/* const date = new Date();
+
+let currentDay= String(date.getDate()).padStart(2, '0');
+
+let currentMonth = String(date.getMonth()+1).padStart(2,"0");
+
+let currentYear = date.getFullYear();
+
+
+
+let currentDate = `${currentDay}-${currentMonth}-${currentYear}`;
+
+console.log("The current date is " + currentDate);  */
+
+var currentdate = new Date();
+/* var currentDate =currentdate.getDate() + "-"
+                + (currentdate.getMonth()+1)  + "-" 
+                + currentdate.getFullYear() + "  "  
+            
+                +  currentdate.getHours()+ ":" 
+                +  currentdate.getMinutes()+ ":" 
+                +  currentdate.getSeconds(); 
+                
+console.log(currentDate); */
+
+var currentDate = new Date();
+var dd = String(currentDate.getDate()).padStart(2, '0');
+var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = currentDate.getFullYear();
+var  hh12=currentdate.getHours();
+var mi=currentdate.getMinutes();
+var ss=String(currentdate.getSeconds()).padStart(2, '0');
+
+currentDate = mm + '-' + dd + '-' + yyyy+"  "+hh12 + ':' + mi + ':' + ss;
+/* document.write(currentDate); */
+console.log(currentDate);
+
+
+
+
+
+/* const currentDate = new Date();
+const day = String(currentDate.getDate()).padStart(2, '0');
+const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+const year = String(currentDate.getFullYear());
+const formattedDate = '[${day}-${month}-${year}]
+ */
+document.getElementById("ApprovalId").disabled = true;
+document.getElementById("ApprovalId").style.display="none";
+
+document.getElementById("ReopenId").disabled = false;
+document.getElementById("ReopenId").style.display="none";
+
+
+document.getElementById("CloseId").disabled = true;
+document.getElementById("CloseId").style.display="none"; 
+document.getElementById("ModifyId").disabled = true;
+document.getElementById("ModifyId").style.display="none";
+document.getElementById("DeleteId").disabled = true;
+document.getElementById("DeleteId").style.display="none";
+
+document.getElementById("imgLov").style.display="none";
+document.getElementById('cust_id').disabled = true;
+document.getElementById('cust_Once_Auth1').disabled = true;
+/* document.getElementById('roleScreen').style.display="none"; */
+
+
+
+
+/*  var modifysaveElem=document.getElementById("Id");
+modifysaveElem.style.display="none"; */ 
+
+var modifysaveElem=document.getElementById("buttonSave");
+modifysaveElem.style.display="none";
+
+var fetchbtnElem=document.getElementById("fetchbtn");
+fetchbtnElem.style.display="none";
+
+var frameElem=document.getElementById("f1");
+frameElem.style.display="none";
+var WNDtitlebarElem =document.getElementById("WNDtitlebar");
+WNDtitlebarElem.style.display="none";
+document.getElementById("buttonExec").style.display="none"; 
+document.getElementById("buttonSave").style.display="none"; 
+
+
+
+
+
+
+/* function enableFields() {
+	
+	// const disabledInputs = document.querySelectorAll("input[disabled]");
+	const disabledInputs = document.querySelectorAll(".disabled-input");
+	
+	disabledInputs.forEach(input=>{
+		input.removeAttribute('disabled');
+	});
+	//document.getElementsByName("Department")[0].disabled=false;
+	
+	console.log("Fields enabled");
+	
+	document.getElementById("cancelButton").style.display = "inline-block";
+	document.getElementById("buttonSave").style.display = "inline-block";
+	
+	
+} */
+
+
+function createBTN(){
+	modifysaveElem.style.display="none";
+	fetchbtnElem.style.display="none";
+	
+	 
+	document.getElementById("imgLov").style.display="";
+	document.getElementById("buttonExec").disabled = false;
+	document.getElementById("buttonExec").style.display="block"; 
+	/* document.getElementById("buttonSave").style.display="none";  */
+	document.getElementById("ModifyId").disabled = true;
+	document.getElementById("ModifyId").style.display="none"; 
+	 document.getElementById("DeleteId").disabled = true;
+	 document.getElementById("DeleteId").style.display="none"; 
+	 document.getElementById("CloseId").disabled = true;
+	 document.getElementById("CloseId").style.display="none"; 
+	 document.getElementById("ApprovalId").disabled = true;
+	 document.getElementById("ApprovalId").style.display="none"; 
+	 document.getElementById("NewId").disabled = false;
+	 document.getElementById("NewId").style.display="none";
+	 document.getElementById('cust_id').disabled = false;
+	 document.getElementById('cust_Once_Auth1').disabled = false;
+	 document.getElementById('ReopenId').style.display="none";
+	 
+
+}
+
+function createNew(){
+	modifysaveElem.style.display="none";
+	fetchbtnElem.style.display="none";
+	
+	
+	document.getElementById("buttonSave").disabled = false;
+	document.getElementById("buttonSave").style.display="block"; 
+	
+	 document.getElementById("imgLov").style.display="none";
+	 document.getElementById("buttonExec").style.display="none"; 
+ 	 document.getElementById("Id").disabled = true;
+	 document.getElementById("Id").style.display="none";  
+	 document.getElementById("ModifyId").disabled = true;
+	 document.getElementById("ModifyId").style.display="none"; 
+	 document.getElementById("DeleteId").disabled = true;
+	 document.getElementById("DeleteId").style.display="none"; 
+	 document.getElementById("CloseId").disabled = true;
+	 document.getElementById("CloseId").style.display="none"; 
+	 document.getElementById("ApprovalId").disabled = true;
+	 document.getElementById("ApprovalId").style.display="none"; 
+	 document.getElementById('cust_id').disabled = false;
+	/*  document.getElementById('countRow').disabled = false; */
+/* 	 document.getElementById('roleScreen').style.display=""; */
+	 
+
+	 /* document.getElementById("buttonSave").style.display="";  */
+	 	
+}
+
+ /* function newEnable(){
+	 document.getElementById("ModifyId").enabled = true;
+	 document.getElementById("ModifyId").style.display=""; 
+	 document.getElementById("DeleteId").enabled = true;
+	 document.getElementById("DeleteId").style.display=""; 
+	 document.getElementById("CloseId").enabled = true;
+	 document.getElementById("CloseId").style.display=""; 
+	 document.getElementById("ApprovalId").enabled = true;
+	 document.getElementById("ApprovalId").style.display=""; 
+	 document.getElementById("buttonExec").disabled = true;
+	 document.getElementById("buttonExec").style.display="none";
+	
+} */
+function enableNew(){
+	/* var userLogIn=parent.document.getElementById("user").innerText.trim();
+	console.log("userLogIn:",userLogIn);
+	
+	var cust_mak=document.getElementById("cust_maker").value.trim();
+	console.log("cust_mak:",cust_mak);
+
+	if(document.getElementById("cust_Once_Auth").value === "Y" ){
+		document.getElementById("DeleteId").enabled = true;
+		 document.getElementById("DeleteId").style.display=""; 
+	}
+	 */
+	 document.getElementById("ModifyId").enabled = true;
+	 document.getElementById("ModifyId").style.display="";  
+	 document.getElementById("DeleteId").enabled = true;
+	 document.getElementById("DeleteId").style.display=""; 
+	 /*  document.getElementById("CloseId").enabled = true;
+	 document.getElementById("CloseId").style.display="";   */
+	 document.getElementById("ApprovalId").enabled = true;
+	 document.getElementById("ApprovalId").style.display=""; 
+	 document.getElementById("buttonExec").disabled = true;
+	 document.getElementById("buttonExec").style.display="none";
+	 document.getElementById('cust_id').readOnly = false;
+	 document.getElementById("imgLov").style.display="none";
+}
+
+ 
+ 
+
+
+
+
+function readOnlyf(){
+	document.getElementById('cust_id').readOnly = false;
+	document.getElementById('cust_name').readOnly = false;
+	document.getElementById('cust_password').readOnly = false;
+	document.getElementById('cust_dept').readOnly = false;
+	document.getElementById('cust_email').readOnly = false;
+	document.getElementById('cust_manager').readOnly = false;
+	document.getElementById('cust_ldap').readOnly = false;
+	document.getElementById('cust_phone').readOnly = false;
+	
+}
+function readOnlyt(){
+	document.getElementById('cust_id').disabled = true;
+	document.getElementById('cust_name').disabled = true;
+	document.getElementById('cust_password').disabled = true;
+	document.getElementById('cust_dept').disabled = true;
+	document.getElementById('cust_email').disabled = true;
+	document.getElementById('cust_manager').disabled = true;
+	document.getElementById('cust_ldap').disabled = true;
+	document.getElementById('cust_phone').disabled = true;
+	document.getElementById('button1').disabled = true;
+	document.getElementById('button2').disabled = true;
+}
+
+var arr=[];
+
+function insertData(id,id2 ){
+	console.log("calling function::",id);
+	arr[0]=id;
+	arr[1]=id2; 
+}
+
+
+window.addEventListener("message", function(message) {
+	/* console.log("Message received from the parent: " + message.data.role_id); // Message received from parent
+	        recivedArray[0]= message.data.role_id.trim();
+	       console.log("Message received from the parent: " + message.data.role_desc);
+	       
+	       recivedArray[1] = message.data.role_desc.trim();
+	       
+	         document.getElementById("custid").value = message.data.role_id.trim(); */
+	        /*  var dta111=nameArray[1].id; */
+	        if(typeof arr[1] === "undefined")
+	        {
+	        arr[1]="";
+	        }
+	         console.log("Message received from the parent:",message.data);
+	         /* document.getElementById(arr[0]).value = message.data[0]; */
+	          console.log("arr:::::::::::::::::::::::",arr);
+	         if(arr[0] !== ""){
+	        document.getElementById(arr[0]).value = message.data[0];
+	         if (arr[1] !== "" ){
+	        document.getElementById(arr[1]).value = message.data[1];
+	         }}
+	         
+	       
+	      closeFrame();
+	       /* document.getElementById("inputtd10").value = message.data.role_desc.trim();   */
+	      }); 
+
+function frameinWin(lov_id, function_id,title){
+	console.log("Name::",lov_id,function_id,title);
+	
+	frameElem.style.display="block";
+	document.getElementById("WNDmaxBTN").style.display="none";
+	 WNDtitlebarElem.style.display="none";
+	frameElem.style.display="block"; 
+	
+	
+	var titleLOVElem = document.getElementById("titleLOV");
+	
+	
+	
+	titleLOVElem.innerText=title;
+	
+/*  			document.getElementsByClassName("WNDbuttons").style.visibility = "hidden";
+*/			  
+      
+            
+                   var arr=[lov_id,function_id];
+                   console.log("Arr:",arr);
+                   
+                  /*  const map = '{"name":"John", "age":30, "city":"New York"}';
+                   const obj = JSON.parse(map); */
+
+                   frameElem.src=origin+"/"+parent.getProjectName()+"/LovServlet1?getLogField=Field&lov_id="+lov_id+"&"+"function_id="+function_id;
+	       
+	        
+	       /*  ifrm.style.width = "800px";
+	        ifrm.style.height = "800px"; */
+	       
+	      
+	          
+	         
+	         var LOVL=document.getElementById('LOVL').innerText;
+}
+
+function closeFrame(){
+	
+	
+	frameElem.style.display="none";
+	document.getElementById("WNDtitlebar").style.display="none";
+	let iframe=document.getElementById("f1");
+	let lov_id="";
+	let function_id="";
+	iframe.src=origin+"/Dynamic_Web_Menu_Page_new12/LovServlet1?lov_id="+lov_id+"&"+"function_id="+function_id;
+
+
+}
+
+async function getCustomerDetails (method) {
+ 
+	var cust_mak=document.getElementById("cust_maker").value.trim();
+	console.log("cust_mak:",cust_mak);
+	var userLogIn=parent.document.getElementById("user_id").innerText;
+	console.log("userLogIn:",userLogIn);
+	
+	
+	console.log(method)
+/*  await swal("Wait", "Please wait while getting customer details", "success", {
+       button: "Allright",
+    });  */
+ let custId = document.getElementById("cust_id").value;
+ console.log("+++", custId);
+ 
+ 
+ fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=GET&cust_id="+custId)  
+.then(function(response) {  
+	// first then()
+	
+     if(response.ok)
+     {
+       return response.text();         
+     }
+     
+   
+     alert("there is no data");
+     
+
+     document.getElementById("NewId").disabled = false;
+	 document.getElementById("NewId").style.display="";
+     document.getElementById("ModifyId").disabled = true;
+	 document.getElementById("ModifyId").style.display="none"; 
+	 document.getElementById("DeleteId").disabled = true;
+	 document.getElementById("DeleteId").style.display="none"; 
+	 document.getElementById("CloseId").disabled = true;
+	 document.getElementById("CloseId").style.display="none"; 
+	 document.getElementById("ApprovalId").disabled = true;
+	 document.getElementById("ApprovalId").style.display="none"; 
+	 document.getElementById("buttonExec").disabled = true;
+	 document.getElementById("buttonExec").style.display="none";
+	 
+	 
+	 //Refresh Cust_id
+	document.getElementById("cust_id").value="";
+		 
+		 
+     
+     throw new Error('Something went wrong.');
+ })  
+ .then(function(text) {                          // second then()
+   console.log('Request successful', text);  
+ })  
+ .catch(function(error) {                        // catch
+   console.log('Request failed', error);
+ });
+ 
+ 
+ 
+ await fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=GET&cust_id="+custId).then(data=> data.json())
+ .then(async(data) => {
+	 console.log(data.json);
+	 
+	 
+ if(method === "GET" || method === "UserMaintenanceModify" ) {
+	 
+	 
+	 var cust_mak=document.getElementById("cust_maker").value.trim();
+		console.log("cust_mak:",cust_mak);
+		var userLogIn=parent.document.getElementById("user_id").innerText;
+		console.log("userLogIn:",userLogIn);
+		
+
+ for(const [key, value] of Object.entries(data)) {
+	 
+	
+	 
+	 if(key === "cust_Status" && value === "Close" )
+	 {
+	   document.getElementById("ModifyId").style.display="";
+	 }
+  if(document.getElementById("cust_maker").value.trim() === parent.document.getElementById("user_id").innerText)
+	 {
+	 document.getElementById("ModifyId").style.display="";
+	 }
+  else{
+	  document.getElementById("ModifyId").style.display="";
+  }
+ 
+	 
+	 
+	 if(method === "GET"){
+		 
+	 
+/*  document.getElementById(key).readOnly =false; */
+/*  document.getElementById(key).disabled=false;
+ document.getElementById("CloseId").disabled=false;
+ document.getElementById("DeleteId").disabled=false; */
+ 
+ readOnlyt();
+ 
+ /* document.getElementById('custid').readOnly = true;
+	document.getElementById('cust_name').readOnly = true;
+	document.getElementById('cust_password').readOnly = true;
+	document.getElementById('cust_dept').readOnly = true;
+	document.getElementById('cust_email').readOnly = true;
+	document.getElementById('cust_manager').readOnly = true;
+	document.getElementById('cust_ldap').readOnly = true;
+	document.getElementById('cust_phone').readOnly = true;
+	 */
+ 
+ document.getElementById("cust_maker").readOnly = true;
+ document.getElementById("cust_Approver").readOnly = true;
+ document.getElementById("cust_Status").readOnly = true;
+
+ document.getElementById("cust_maker_dt_stamp").readOnly = true;
+ document.getElementById("cust_Aprovertime").readOnly = true;
+ document.getElementById("cust_Approver_statement").readOnly = true;
+ 
+ if(key === "cust_Once_Auth" && value === "Y")
+	 {
+	 document.getElementById("cust_Once_Auth1").checked = true;
+	
+	 }
+	}
+	 
+	 if(method === "UserMaintenanceModify"){
+		 document.getElementById(key).readOnly = false;
+		
+			 }
+	 
+	  if(value === 'null'){
+		 value.replace('null',' ');
+		  
+	  }
+	  
+	  else{
+		  
+	  console.log("key:::",key,"   ","value::",value);
+   
+	  
+	  if(key === 'countRow')
+		  {
+		  
+		  for(var addrow=1;addrow<=value;addrow++)
+			  {
+		  addRow('dataTable');
+			  }
+		  }else{
+	  
+	  document.getElementById(key).value = value;
+		  }
+	  
+	  
+   if(cust_mak !== userLogIn && document.getElementById("cust_Approver_statement").value === "Authorize" && document.getElementById("cust_Once_Auth").value ==="Y"){
+
+		console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		
+	   document.getElementById("ModifyId").style.display=""; 
+	   
+	   document.getElementById("CloseId").style.display=""; 
+	   
+	   if(key === "countRow")
+		 {
+		 for(var count_row=1;count_row<=value;count_row++){
+			 addRow('dataTable');
+			 console.log("calling func at row====");
+		 }
+		 }
+	  
+}
+   
+   else if(document.getElementById("cust_Status").value === "Close" && cust_mak !== userLogIn && document.getElementById("cust_Approver_statement").value === "Authorize"){
+	   
+	   console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+	   document.getElementById("CloseId").style.display="none"; 
+		  
+	   
+   }
+   /* else if(cust_mak !== userLogIndocument.getElementById("cust_Approver_statement").value === "U" && document.getElementById("cust_Once_Auth").value ==="N" ){
+	 document.getElementById("ModifyId").disabled = true;
+	   document.getElementById("ModifyId").style.display="none";  */
+	   /* document.getElementById("CloseId").disabled = true;
+	   document.getElementById("CloseId").style.display=""; */
+	 
+		
+   
+	  }
+  }
+  } else {
+  
+  for (const [key, value] of Object.entries(data)) {
+	 
+	 
+  document.getElementById(key).value = value;
+  
+	  
+  
+  }
+  
+  }
+ 
+ ApproveBtnEnableCheck();
+ document.getElementById("buttonExec").disabled = true;
+ 
+ document.getElementById("NewId").disabled = false;
+
+ document.getElementById("ModifyId").disabled = false;
+
+
+  })
+}
+
+
+function resetValues(){
+	fetchbtnElem.style.display="none";
+	 document.getElementById("cust_name").value="";
+	 document.getElementById("cust_id").value="";
+	 document.getElementById("cust_password").value="";
+	 document.getElementById("cust_dept").value="";
+	 document.getElementById("cust_email").value="";
+	 document.getElementById("cust_manager").value="";
+	 document.getElementById("cust_ldap").value="";
+	 document.getElementById("cust_phone").value="";
+	 document.getElementById("cust_maker").value="";
+	 document.getElementById("cust_maker_dt_stamp").value="";
+	 document.getElementById("cust_Approver").value="";
+	 document.getElementById("cust_Aprovertime").value="";
+	 document.getElementById("cust_Status").value="";
+	 document.getElementById("cust_Approver_statement").value="";
+	 document.getElementById("cust_Once_Auth1").checked=false;
+	 
+}
+
+
+function modifybtnEnable(){
+	modifysaveElem.style.display="block";
+	 document.getElementById("buttonSave").style.display="";
+	 document.getElementById("buttonExec").style.display="none";
+	 document.getElementById("ReopenId").style.display="none";
+	 document.getElementById("cust_maker").value=parent.document.getElementById("user_id").innerText;
+	 document.getElementById("NewId").style.display="none";
+	 document.getElementById("CloseId").style.display="none";
+	 document.getElementById("Id").style.display="none";
+	 document.getElementById("ApprovalId").style.display="none";
+	 document.getElementById("DeleteId").style.display="none";
+}
+
+function modifybtn(){
+	fetchbtnElem.style.display="none";
+	
+	
+	 document.getElementById("DeleteId").disabled = false;
+	 document.getElementById('cust_id').readOnly = false;
+	 document.getElementById("cust_Approver_statement").value="Unauthorize";
+	 document.getElementById("cust_Once_Auth").value="N";
+	 document.getElementById("cust_Approver").value="";
+	 document.getElementById("cust_Aprovertime").value="";
+	 document.getElementById("cust_maker_dt_stamp").value="";
+	 
+	 
+
+}
+
+function reopenEnable(){
+	 document.getElementById("cust_maker").value=parent.document.getElementById("user_id").innerText;
+	  document.getElementById("cust_Approver_statement").value="Unauthorize";
+		document.getElementById("cust_Status").value="Open";
+		 document.getElementById("cust_Approver").value="";
+		 document.getElementById("cust_Aprovertime").value="";
+		 document.getElementById("cust_maker_dt_stamp").value="";
+	}
+
+
+function CustPost(method){
+	var cust_mak=document.getElementById("cust_maker").value.trim();
+	console.log("cust_mak:",cust_mak);
+	var userLogIn=parent.document.getElementById("user_id").innerText;
+	console.log("userLogIn:",userLogIn);
+	let custId = document.getElementById("cust_id").value;
+	let cust_name = document.getElementById("cust_name").value;
+	let cust_pass = document.getElementById("cust_password").value;
+	let cust_dept = document.getElementById("cust_dept").value;
+	let cust_email = document.getElementById("cust_email").value;
+	/* let cust_maker = document.getElementById("cust_maker").value; */
+	let cust_manager = document.getElementById("cust_manager").value;
+	let cust_ladp = document.getElementById("cust_ldap").value;
+	let cust_phone = document.getElementById("cust_phone").value;
+	let cust_maker = parent.document.getElementById("user_id").innerText;
+	let cust_maker_dt_stamp = document.getElementById("cust_maker_dt_stamp").value;
+	let cust_Approver = document.getElementById("cust_Approver").value;
+	let cust_Aprovertime = document.getElementById("cust_Aprovertime").value;
+	let cust_Status = document.getElementById("cust_Status").value;
+	let cust_Approver_statement = document.getElementById("cust_Approver_statement").value;
+	let cust_Once_Auth=document.getElementById("cust_Once_Auth").value;
+	let countRow=document.getElementById("countRow").value;
+	if(document.getElementById("cust_maker").value.trim() === parent.document.getElementById("user_id").innerText)
+		
+	{
+		if(method === "POST")
+		{
+		  var url_send_data=origin+"/Dynamic_Web_Menu_Page_new12/UserMaintenance?method=POST&cust_id="+custId+"&"+"cust_name="+cust_name+"&"+
+		 "cust_password="+cust_pass+"&"+"cust_dept="+cust_dept+"&"+"cust_email="+cust_email+"&"+"cust_manager="+cust_manager+"&"+"cust_ldap="+cust_ladp+"&"+"cust_phone="+cust_phone+"&"+"cust_maker="+cust_maker+"&"+
+		 "cust_maker_dt_stamp="+cust_maker_dt_stamp+"&"+"cust_Approver="+cust_Approver+"&"+"cust_Aprovertime="+cust_Aprovertime+
+		 "&"+"cust_Status="+cust_Status+"&"+"cust_Approver_statement="+cust_Approver_statement+"&"+"cust_Once_Auth="+cust_Once_Auth+"&"+"countRow="+countRow;  
+         
+		  for(var index=0;index<document.getElementById('countRow').value;index++){
+			  var inputTD="inputid"+index;
+			  var inputDesc="inputdesc"+index;
+			  console.log("inputTD::"+inputTD);
+			  url_send_data=url_send_data+"&inputid"+index+"="+document.getElementById(inputTD).value.trim();
+		  }
+		  console.log("url_send_data:::"+url_send_data);
+		  if(custId === "" || custId === null)
+        	 {
+        	 
+        	 alert("Please enter mandatory fileds");
+        	 document.getElementById("ModifyId").style.display="none";
+          	 document.getElementById("DeleteId").style.display="none";
+          	 document.getElementById("CloseId").style.display="none";
+        	 
+        	 }
+         else{
+        	 
+        	  fetch(url_send_data);  
+        	 
+        	/* document.getElementById('postFormId').submit(); */
+             alert("Sucessfully Save");
+           document.getElementById("ModifyId").style.display="";
+      	 document.getElementById("DeleteId").style.display="";
+      	document.getElementById("Id").style.display="";
+      	readOnlyt();
+         }
+     	/* fetchbtnElem.style.display="none";
+    	 document.getElementById("cust_name").value="";
+    	 document.getElementById("custid").value="";
+    	 document.getElementById("cust_password").value="";
+    	 document.getElementById("cust_dept").value="";
+    	 document.getElementById("cust_email").value="";
+    	 document.getElementById("cust_manager").value="";
+    	 document.getElementById("cust_ldap").value="";
+    	 document.getElementById("cust_phone").value="";*/
+    	 document.getElementById("buttonSave").style.display="none"; 
+    	 document.getElementById("ModifyId").disabled = false;
+      	 document.getElementById("DeleteId").disabled = false; 
+      	 document.getElementById("CloseId").disabled = false;
+      	 document.getElementById("Id").disabled = false;
+		}
+	else{
+		
+	}
+	document.getElementById("cust_maker_dt_stamp").value=currentDate;
+	 
+	
+	}
+
+	if(method === "UPDATE")
+		
+		{
+		
+		
+		 /*  if(custId === "" || custId === null )
+     	 {
+     	   alert("there is no data that you have entered");
+     		 document.getElementById("ModifyId").style.display="none";
+          	 document.getElementById("DeleteId").style.display="none";
+          	 document.getElementById("CloseId").style.display="none";
+     	 } */
+		  
+		  
+		  if(cust_mak !== userLogIn && document.getElementById("cust_Approver_statement").value === "Unauthorize"  ){
+				  console.log("modify meeeeeee");
+				  /* alert("Checker cannot Modify ");	 */ 
+				if (document.getElementById("cust_Once_Auth").value="Y" && document.getElementById("cust_Approver_statement").value === "Unauthorize")	   {
+					 modifybtn();
+			    	  cust_Approver="";
+			 		 cust_Aprovertime="";
+			 		
+			 		fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=UPDATE&cust_id="+custId+"&"+"cust_name="+cust_name+"&"+
+			 				 "cust_password="+cust_pass+"&"+"cust_dept="+cust_dept+"&"+"cust_email="+cust_email+"&"+"cust_manager="+cust_manager+"&"+"cust_ldap="+cust_ladp+"&"+"cust_phone="+cust_phone+"&"+"cust_maker="+cust_maker+"&"+
+			 				 "cust_maker_dt_stamp="+cust_maker_dt_stamp+"&"+"cust_Approver="+cust_Approver+"&"+"cust_Aprovertime="+cust_Aprovertime+
+			 				 "&"+"cust_Status="+cust_Status+"&"+"cust_Approver_statement="+cust_Approver_statement+"&"+"cust_Once_Auth="+cust_Once_Auth);
+	 	
+			        alert("Successfuly Modify");
+			         modifySave(); 
+				}
+			  } 
+      else{
+    	  modifybtn();
+    	  cust_Approver="";
+ 		 cust_Aprovertime="";
+ 		
+ 		
+ 		fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=UPDATE&cust_id="+custId+"&"+"cust_name="+cust_name+"&"+
+				 "cust_password="+cust_pass+"&"+"cust_dept="+cust_dept+"&"+"cust_email="+cust_email+"&"+"cust_manager="+cust_manager+"&"+"cust_ldap="+cust_ladp+"&"+"cust_phone="+cust_phone+"&"+"cust_maker="+cust_maker+"&"+
+				 "cust_maker_dt_stamp="+cust_maker_dt_stamp+"&"+"cust_Approver="+cust_Approver+"&"+"cust_Aprovertime="+cust_Aprovertime+
+				 "&"+"cust_Status="+cust_Status+"&"+"cust_Approver_statement="+cust_Approver_statement+"&"+"cust_Once_Auth="+cust_Once_Auth);
+        alert("Successfuly Modify");
+         document.getElementById("NewId").style.display="";
+	   	 document.getElementById("Id").style.display="";
+	   	 document.getElementById("ModifyId").style.display="";
+	   	document.getElementById("DeleteId").style.display="";
+      }
+     	 
+     	   document.getElementById("buttonSave").style.display="none";
+		  document.getElementById("NewId").disabled = false;
+	
+		   // Disabling AprovalButton for maker
+		   document.getElementById("ApprovalId").style.display="none"; 
+     	}
+		
+	  document.getElementById("cust_maker_dt_stamp").value=currentDate;
+	 
+	  
+	 /*  document.getElementById("here").innerHTML.reload */
+}
+
+function deleteData(){
+	let custId = document.getElementById("cust_id").value;
+	console.log("deleteData:::",custId)
+	fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=DELETE&cust_id="+custId);
+	
+} 
+
+
+function moddisable(){
+	 document.getElementById("DeleteId").style.display="none";
+	  document.getElementById("CloseId").style.display="none";
+}
+
+
+
+function readOnlyf(){
+	document.getElementById('cust_id').readOnly = false;
+	document.getElementById('cust_name').readOnly = false;
+	document.getElementById('cust_password').readOnly = false;
+	document.getElementById('cust_dept').readOnly = false;
+	document.getElementById('cust_email').readOnly = false;
+	document.getElementById('cust_manager').readOnly = false;
+	document.getElementById('cust_ldap').readOnly = false;
+	document.getElementById('cust_phone').readOnly = false;
+	
+	}
+	
+function remove(){
+	 document.getElementById("ModifyId").style.display="none";
+  	 document.getElementById("DeleteId").style.display="none";
+  	 document.getElementById("CloseId").style.display="none";
+  	 document.getElementById("NewId").style.display="";	
+}
+
+
+
+function getDataFooter(){
+	document.getElementById("cust_maker").value=parent.document.getElementById("user_id").innerText;
+	
+	
+	
+/* 	document.getElementById("cust_maker_dt_stamp").value=currentDate; */
+	document.getElementById("cust_Status").value="Open";
+	document.getElementById("cust_Approver_statement").value="Unauthorize";
+	document.getElementById("cust_Once_Auth").value="N";
+	
+}
+
+/* function mydate1() {
+	  d = new Date(document.getElementById("dt").value);
+	  dt = d.getDate();
+	  mn = d.getMonth();
+	  mn++;
+	  yy = d.getFullYear();
+	  document.getElementById("cust_dob").value = dt + "-" + mn + "-" + yy  
+	} */
+
+function readOnlyFooterField(){	
+document.getElementById("cust_maker").readOnly = true;
+document.getElementById("cust_Approver").readOnly = true;
+document.getElementById("cust_Status").readOnly = true;
+
+document.getElementById("cust_maker_dt_stamp").readOnly = true;
+document.getElementById("cust_Aprovertime").readOnly = true;
+document.getElementById("cust_Approver_statement").readOnly = true;
+}
+
+readOnlyFooterField();
+
+
+
+
+
+
+function validateDelet(){
+
+
+    var cust_Ap_st=document.getElementById("cust_Approver_statement").value;
+    console.log("cust_Ap_st:",cust_Ap_st);
+    var cust_Once_A=document.getElementById("cust_Once_Auth").value;
+    console.log("cust_Once_A:",cust_Once_A);
+    var userLogIn=parent.document.getElementById("user_id").innerText;
+    console.log("userLogIn:",userLogIn);
+
+    var cust_mak=document.getElementById("cust_maker").value.trim();
+    console.log("cust_mak:",cust_mak);
+
+ 
+
+    var response = confirm("Are you sure you want to delete ?");
+    console.log("response"+response);
+   if (response == true) {
+       //document.write("Delete Sucessfull");
+       console.log("all condition is :::",cust_Ap_st === "Unauthorize" &&  cust_Once_A === "N" && cust_mak === userLogIn)
+
+
+       /* if(cust_Ap_st === "U" &&  cust_Once_A === "N" && cust_mak !== userLogIn)
+        {
+           alert(" Approver Cannot delete");
+        } */
+       if(cust_Ap_st === "Unauthorize" &&  cust_Once_A === "N" && cust_mak === userLogIn)
+        {
+        deleteData();
+        alert("Delete Sucessfull");
+        resetValues();
+        remove();
+        }
+    else{
+        alert("Cannot delete ");
+
+    }
+
+   }
+}
+
+
+function ApproveBtnEnableCheck(){
+	
+	
+	
+	console.log("Inside funcion ApproveBtnEnableCheck():::");
+	
+	var cust_Ap_st=document.getElementById("cust_Approver_statement").value;
+	console.log("cust_Ap_st:",cust_Ap_st);
+	var cust_Once_A=document.getElementById("cust_Once_Auth").value;
+	console.log("cust_Once_A:",cust_Once_A);
+	var userLogIn=parent.document.getElementById("user_id").innerText;
+	console.log("userLogIn:",userLogIn);
+	
+	var cust_mak=document.getElementById("cust_maker").value.trim();
+	console.log("cust_mak:",cust_mak);
+	
+	var cust_Ap_st=document.getElementById("cust_Approver_statement").value;
+	console.log("cust_Ap_st:",cust_Ap_st);
+	let cust_makerE=document.getElementById("cust_maker").value.trim();
+	let cust_Once_AuthE=document.getElementById("cust_Once_Auth").value;
+	let parent_cust_makerElem = parent.document.getElementById("user_id").innerText;
+	console.log("cust_makerElem::"+cust_makerE +"parent_cust_makerElem::"+ parent_cust_makerElem);
+	console.log("condition ::"+cust_makerE === parent_cust_makerElem);
+	if( cust_makerE === parent_cust_makerElem)
+		{
+		
+		   document.getElementById("ApprovalId").disabled = true; 
+		   // Disabling AprovalButton for maker
+		   document.getElementById("ApprovalId").style.display="none";
+		   document.getElementById("ReopenId").style.display="none";
+		   
+		   if(cust_makerE === parent_cust_makerElem && document.getElementById("cust_Status").value === "Close" )
+				document.getElementById("CloseId").style.display="none"; 
+		   document.getElementById("DeleteId").style.display=""; 
+		   document.getElementById("NewId").style.display=""; 
+		
+		   if(cust_makerE === parent_cust_makerElem && document.getElementById("cust_Approver_statement").value === "Unauthorize")
+				 document.getElementById("DeleteId").style.display=""; 
+			if(cust_makerE === parent_cust_makerElem /* && document.getElementById("cust_Status").value === "Close" || document.getElementById("cust_Status").value === "Open" */  && document.getElementById("cust_Once_Auth").value === "Y")
+				   document.getElementById("DeleteId").style.display="none"; 
+		}
+	
+		   /* document.getElementById("CloseId").style.display="none"; */
+		   
+		   else if(cust_makerE !== parent_cust_makerElem && cust_Ap_st === "Unauthorize" ){
+			   
+			   console.log("Inside else if ");
+			   document.getElementById("ModifyId").disabled = true;
+			   document.getElementById("ModifyId").style.display="none";
+			   document.getElementById("DeleteId").disabled = true;
+			   document.getElementById("DeleteId").style.display="none"
+				   document.getElementById("ApprovalId").disabled = false; 
+			   // Disabling AprovalButton for maker
+			 
+		   } 
+	
+		   else if(cust_makerE !== parent_cust_makerElem && cust_Ap_st === "Authorize"){
+			   document.getElementById("DeleteId").style.display="none";
+				   document.getElementById("ApprovalId").style.display="none";
+				   document.getElementById("NewId").style.display=""; 
+if(cust_makerE !== parent_cust_makerElem && document.getElementById("cust_Status").value === "Close" )
+	document.getElementById("CloseId").style.display="none"; 
+if(cust_makerE !== parent_cust_makerElem && document.getElementById("cust_Approver_statement").value === "Authorize" && document.getElementById("cust_Once_Auth").value ==="Y" && document.getElementById("cust_Status").value === "Close"){
+	   document.getElementById("ReopenId").style.display=""; 
+	   document.getElementById("ModifyId").style.display="none"; 
+	   document.getElementById("ApprovalId").disabled = false;
+}	   
+}
+		
+	else{
+			document.getElementById("ApprovalId").disabled = false;
+		/* 	document.getElementById("ApprovalId").style.display="block"; */
+			document.getElementById("DeleteId").disabled = true;
+			   document.getElementById("DeleteId").style.display="none"; 
+			   /*  document.getElementById("NewId").disabled = false;
+			   document.getElementById("NewId").style.display="";   */
+			   document.getElementById("ModifyId").style.display="none"; 
+	}
+}
+
+function approveData(){
+	if(document.getElementById("cust_maker").value !== parent.document.getElementById("user_id").innerText && document.getElementById("cust_Approver_statement").value === "Unauthorize" && document.getElementById("cust_Once_Auth").value === "N"){
+		
+		
+	
+		 let custId=document.getElementById("cust_id").value;
+		  
+		 document.getElementById("cust_Approver").value=parent.document.getElementById("user_id").innerText;
+		 let cust_Once_AuthEle=document.getElementById("cust_Once_Auth").value="Y";
+		 console.log("cust_Once_AuthEle::"+cust_Once_AuthEle);
+		 let cust_ap_stmtElem=document.getElementById("cust_Approver_statement").value="Authorize";
+		 console.log("cust_ap_stmtElem::"+cust_ap_stmtElem);
+		 let cust_StatusElem=document.getElementById("cust_Status").value;
+		 console.log("cust_StatusElem::"+cust_StatusElem);
+		 document.getElementById("cust_Aprovertime").value=currentDate;
+		 document.getElementById("cust_Once_Auth1").checked=true;
+		  
+		 
+		 
+		 fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=APPROVE&cust_id="+custId+"&"+"cust_Once_Auth="
+				 +cust_Once_AuthEle+"&"+"cust_Approver_statement="+cust_ap_stmtElem+"&"+"cust_Approver="+
+				 parent.document.getElementById("user_id").innerText);
+		 alert("Approved Sucess");
+		  document.getElementById("ApprovalId").style.display="none";
+		  document.getElementById('cust_Once_Auth1').disabled = false;
+	}
+	/* else if(document.getElementById("cust_maker").value !== parent.document.getElementById("user").innerText.trim() && 
+		document.getElementById("cust_Approver_statement").value === "Unauthorize" && document.getElementById("cust_Once_Auth").value === "Y" && document.getElementById("cust_Status").value === "Open")
+	{
+		
+
+		 let custId=document.getElementById("custid").value;
+		  
+		 document.getElementById("cust_Approver").value=parent.document.getElementById("user").innerText.trim();
+		 let cust_Once_AuthEle=document.getElementById("cust_Once_Auth").value="Y";
+		 console.log("cust_Once_AuthEle::"+cust_Once_AuthEle);
+		 let cust_ap_stmtElem=document.getElementById("cust_Approver_statement").value="Authorize";
+		 console.log("cust_ap_stmtElem::"+cust_ap_stmtElem);
+		 let cust_StatusElem=document.getElementById("cust_Status").value;
+		 console.log("cust_StatusElem::"+cust_StatusElem);
+		 document.getElementById("cust_Aprovertime").value=currentDate;
+		 document.getElementById("cust_Once_Auth1").checked=true;
+		  
+		 
+		 
+		 fetch(origin+"/Dynamic_Web_Menu_Page_new12/UserMaintenance?method=APPROVE&custid="+custId+"&"+"cust_Once_Auth="
+				 +cust_Once_AuthEle+"&"+"cust_Approver_statement="+cust_ap_stmtElem+"&"+"cust_Approver="+
+				 parent.document.getElementById("user").innerText.trim());
+		 alert("Approved Sucess");
+		  document.getElementById("ApprovalId").style.display="none";
+		  document.getElementById('cust_Once_Auth1').disabled = false;
+		
+		
+	
+	} */
+	else if(document.getElementById("cust_Approver_statement").value === "Unauthorize" && document.getElementById("cust_Once_Auth").value === "Y"){
+	  let custId=document.getElementById("cust_id").value;
+	  
+	 document.getElementById("cust_Approver").value=parent.document.getElementById("user_id").innerText;
+	 let cust_Once_AuthEle=document.getElementById("cust_Once_Auth").value="Y";
+	 console.log("cust_Once_AuthEle::"+cust_Once_AuthEle);
+	 let cust_ap_stmtElem=document.getElementById("cust_Approver_statement").value="Authorize";
+	 console.log("cust_ap_stmtElem::"+cust_ap_stmtElem);
+	 let cust_StatusElem=document.getElementById("cust_Status").value;
+	 console.log("cust_StatusElem::"+cust_StatusElem);
+	 document.getElementById("cust_Aprovertime").value=currentDate;
+	 document.getElementById("cust_Once_Auth1").checked=true;
+	  
+	 
+	 
+	 fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=APPROVE&cust_id="+custId+"&"+"cust_Once_Auth="
+			 +cust_Once_AuthEle+"&"+"cust_Approver_statement="+cust_ap_stmtElem+"&"+"cust_Approver="+
+			 parent.document.getElementById("user_id").innerText);
+	 alert("Approved Sucess");
+	  document.getElementById("ApprovalId").style.display="none";
+	  document.getElementById('cust_Once_Auth1').disabled = false;
+	
+	}
+	else{
+		alert("Already Approved");
+	}
+	
+	if(document.getElementById("cust_Status").value === "Close"){
+		console.log("helloooooooo============")
+		document.getElementById("CloseId").style.display="none";
+		   document.getElementById("NewId").disabled = false;
+		   document.getElementById("NewId").style.display="";
+		   document.getElementById("ModifyId").disabled = false;
+		   document.getElementById("ModifyId").style.display=""; 
+	}
+	else{
+	document.getElementById("ModifyId").disabled = false;
+	   document.getElementById("ModifyId").style.display=""; 
+	   document.getElementById("CloseId").disabled = false;
+	   document.getElementById("CloseId").style.display="";
+	   document.getElementById("NewId").disabled = false;
+	   document.getElementById("NewId").style.display="";
+	   document.getElementById("ApprovalId").style.display="none";
+	}
+}
+
+ function reOpen(){
+	
+	 console.log("reopen====+++");
+	let custId = document.getElementById("cust_id").value;
+	let cust_maker = parent.document.getElementById("user_id").innerText;
+	let cust_maker_dt_stamp = document.getElementById("cust_maker_dt_stamp").value;
+	let cust_Approver = document.getElementById("cust_Approver").value;
+	let cust_Aprovertime = document.getElementById("cust_Aprovertime").value;
+	/* let cust_Approver_statement = document.getElementById("cust_Approver_statement").value; */
+	let cust_StatusE=document.getElementById("cust_Status").value="Open";
+
+	if(document.getElementById("cust_maker").value !== parent.document.getElementById("user_id").innerText 
+			|| document.getElementById("cust_Once_Auth").value === "Y" /* || document.getElementById("cust_Approver_statement").value === "Unathorize" 
+			|| cust_StatusE.value === "Open" */){
+		
+	console.log("reopen====");
+		 let custId=document.getElementById("cust_id").value;
+		 
+		 document.getElementById("cust_Approver").value=parent.document.getElementById("user_id").innerText;
+		
+		 let cust_ap_stmtElem=document.getElementById("cust_Approver_statement").value="Unauthorize";
+		 console.log("cust_ap_stmtElem::"+cust_ap_stmtElem);
+
+		 
+		 cust_StatusE=document.getElementById("cust_Status").value="Open";
+		 console.log("cust_StatusE::"+cust_StatusE);
+		
+		  
+		 
+		 cust_Approver="";
+	 	cust_Aprovertime="";
+		 fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=REOPEN&cust_id="+custId+"&"+"cust_maker="+cust_maker+"&"+
+ 				 "cust_maker_dt_stamp="+cust_maker_dt_stamp+"&"+"cust_Approver="+cust_Approver+"&"+"cust_Aprovertime="+cust_Aprovertime+
+ 				 "&"+"cust_Status="+cust_StatusE+"&"+"cust_Approver_statement="+cust_ap_stmtElem);
+		 alert("Reopened Sucess");
+		 reopenEnable();
+		 document.getElementById("ReopenId").style.display="none";
+		 
+		 
+		   
+	}
+	 document.getElementById("cust_maker_dt_stamp").value=currentDate;
+	
+}
+ 
+function CloseAcc(){
+	let cust_StatusE=document.getElementById("cust_Status").value="Close"
+	if (cust_StatusE.value === "Close"){
+		alert("Already Closed");
+	}
+	
+	else if(document.getElementById("cust_Approver_statement").value === "Unauthorize"  /* ||  document.getElementById("cust_Status").value === "H" || document.getElementById("cust_Status").value !== "C" */)
+		{
+	/* let cust_StatusE=document.getElementById("cust_Status").value="C";
+	let custid=document.getElementById("custid").value;
+	
+	fetch(origin+"/Dynamic_Web_Menu_Page_new12/UserMaintenanceClose?custid="+custid+"&"+"cust_Status="+cust_StatusE); */
+	alert("Cannot Closed");
+		}
+	
+	else if(document.getElementById("cust_Approver_statement").value === "Authorize"  || cust_StatusE.value === "Open" ||  document.getElementById("cust_Status").value === "H" || document.getElementById("cust_Status").value !== "Close"){
+		 cust_StatusE=document.getElementById("cust_Status").value="Close";
+		let custid=document.getElementById("cust_id").value;
+		
+		fetch(origin+"/"+parent.getProjectName()+"/Screen_Json?function_id=MODUSER&method=CLOSE&cust_id="+custid+"&"+"cust_Status="+cust_StatusE);
+		alert("Successfully Closed");
+		  document.getElementById("CloseId").style.display="none";
+		  document.getElementById("ReopenId").style.display=""; 
+		   document.getElementById("ModifyId").style.display="none";
+	}
+	
+	else{
+		alert("Already Closed");
+	}
+	/* 
+ */
+	
+	}
+
+
+ function enbFilds(){
+	/* var inputs = document.querySelectorAll('.disable-input');
+	 for (var i = 0; i < inputs.length; i++) {
+	   inputs[i].disabled = false; // or true
+	    //inputs[i].style.display = 'none';
+	  } */
+	 
+	 /*  document.getElementById("buttonSave").enabled = true;
+	
+		document.getElementById("buttonSave").style.display="block";  */
+	  
+		document.getElementById("cust_id").style.enabled=true;
+		document.getElementById('cust_id').disabled = true;
+	  
+	  const disabledInputs = document.querySelectorAll(".disabled-input");
+		
+		disabledInputs.forEach(input=>{
+			input.removeAttribute('disabled');
+		}); 
+		
+		/* if(document.getElementById("cust_Approver_statement").value === "U"){
+			  document.getElementById("cust_Approver").value =="";
+		  }else */
+		
+		
+} 
+ 
+ function fnMaximizeLov(){
+		
+		console.log("calling function fnMaximizeLov()::");
+		let iframe=document.querySelector('#f1');
+		console.log(iframe);
+		console.log(iframe.contentDocument);
+		document.querySelector('#f1').style.setProperty('width','1178px');
+		document.querySelector('.WNDtitlebar').style.setProperty('width','1180px');
+		iframe.contentDocument.querySelector('.FSTdlg').style.setProperty('width','181%');
+		iframe.contentDocument.querySelector('.DIVText').style.setProperty('margin-left','2px');
+		document.getElementById("WNDmaxBTN").style.display="none";
+		 /*  iframe.contentDocument.querySelector('#0').style.setProperty('margin-top','-4px');  
+		 iframe.contentDocument.querySelector('#0').style.setProperty('margin-inline','8px'); 
+		 iframe.contentDocument.querySelector('#0').style.setProperty('position','absolute'); 
+		 iframe.contentDocument.querySelector('#0').style.setProperty('left','114px');  */
+		
+		iframe.contentDocument.querySelector('#f1').style.setProperty('width','1161px');
+		
+	}
+
+ function framecss(){
+	 document.querySelector('#f1').style.setProperty('width','680px');
+	 document.querySelector('.WNDtitlebar').style.setProperty('width','682px');
+	 }
+ 
+/*  function check()
+ {
+
+     var mobile = document.getElementById('cust_phone');
+    
+     
+     var message = document.getElementById('message');
+
+  
+   
+     if(mobile.value.length!=10){
+        
+  
+         message.innerHTML = "required 10 digits, match requested format!"
+     }}
+  */
+function samebtnSave(){
+	document.getElementById("buttonSave").style.display="";
+	let element=document.getElementById("buttonSave");
+	 element.setAttribute( "onClick", "CustPost('UPDATE');" );
+	
+}
+
+
+function disableDC(){
+	
+	var cust_mak=document.getElementById("cust_maker").value.trim();
+	console.log("cust_mak:",cust_mak);
+	var userLogIn=parent.document.getElementById("user_id").innerText;
+	console.log("userLogIn:",userLogIn);
+	if(cust_mak === userLogIn && document.getElementById("cust_Approver_statement").value === "Authorize"  )
+	{
+		
+		   document.getElementById("ModifyId").disabled = false;
+		   document.getElementById("ModifyId").style.display=""; 
+		   document.getElementById("CloseId").disabled = false;
+		   document.getElementById("CloseId").style.display=""; 
+		
+	}
+}
+function highletFields() {
+
+    /*  document.getElementById('custid').style.bordercolor = "red";  */
+    document.getElementById("cust_id").style.border = "thin solid black";
+     document.getElementById('cust_name').style.border = "thin solid black";
+     document.getElementById('cust_password').style.border = "thin solid black";
+     document.getElementById('cust_dept').style.border = "thin solid black";
+     document.getElementById('cust_email').style.border  = "thin solid black";
+     document.getElementById('cust_manager').style.border  = "thin solid black";
+     document.getElementById('cust_ldap').style.border  = "thin solid black";
+     document.getElementById('cust_phone').style.border  = "thin solid black";    
+}
+
+
+ 
+ 
+const ids = new Set(); // create a Set to store unique IDs
+
+/* function checkDuplicate() {
+  const idField = document.getElementById("id-field");
+  const id = idField.value.trim(); // get the ID entered by the user
+
+  if (ids.has(id)) { // check if the ID already exists in the Set
+    alert("Duplicate ID! Please enter a unique ID."); // show an alert message if a duplicate is found
+    idField.value = ""; // clear the input field
+    return;
+  }
+
+  ids.add(id); // add the ID to the Set if it's unique
+  idField.value = ""; // clear the input field
+} */
+
+
+
+function validateEmail() {
+    var email = document.getElementById("cust_email").value;
+
+    // Regular expression for Gmail address validation
+    var regex = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+
+    if (regex.test(email) || email === null || email === "") {
+        /* alert("Valid Gmail address"); */
+    	CustPost('POST');  
+    }  else {
+        alert("Invalid Email");
+    } 
+}
+
+
+function disableCheckbox(checkbox) {
+	checkbox.disabled = true;
+
+	checkbox.classList.add("blue-checkbox");
+  }
+  
+
+function displayAlert() {
+  alert("Invalid User ID! This user ID already exists.");
+}
+
+
+ function closeFrame1(){
+	 document.getElementById("frameCl").style.display="none";
+} 
+
+	
+/* 	var recivedArray;
+ window.addEventListener('message', function(event) {
+console.log("Message received from the parent: " + event.data); // Message received from parent
+recivedArray=event.data;
+document.getElementById("inputtd0").value = recivedArray.role_id;
+document.getElementById("inputtd10").value = recivedArray.role_desc;
+
+}); */
+
+var recivedArray={};
+var inputArray=[];
+/*    window.addEventListener("message", function(message) {
+console.log("Message received from the parent: " + message.data.role_id); // Message received from parent
+ recivedArray[0]= message.data[0].trim(); 
+console.log("Message received from the parent: " + message.data.role_desc);
+
+ recivedArray[1] = message.data[1].trim(); 
+console.log(message.data[0]);
+console.log(message.data[1]);
+document.getElementById("inputtd0").value = message.data[0].trim();
+document.getElementById("inputtd10").value = message.data[1].trim();
+closeFrame1();
+
+});  */
+ 
+
+var Msg =document.querySelector("#messege");
+var url="http://localhost:8081/Dynamic_Web_Menu_Page_new12/Searching";
+ /* window.addEventListener('message', function (event)  { 
+	    console.log(`Received message: ${event}`);
+	      });
+ */
+
+
+var myWindow;
+
+var ifrem=document.getElementById("f1");
+
+
+ifrem.style.display="none";
+var url=origin+"/Dynamic_Web_Menu_Page_new12/Searching";
+//	var myWindow = window.open("", "", "width=600,height=500");
+
+
+/* const iframeDouc=doucment.getElementById('iframeChild');
+console.log("Iframe Data:::",iframeDouc); */
+
+function frameinWin1(lov_id,function_id,title){
+	
+	console.log("Name::",lov_id,function_id,title);
+	
+	frameElem.style.display="block";
+	document.getElementById("WNDmaxBTN").style.display="none";
+	 WNDtitlebarElem.style.display="none";
+	frameElem.style.display="block"; 
+	
+	
+	var titleLOVElem = document.getElementById("titleLOV");
+	
+	
+	
+	titleLOVElem.innerText=title;
+	
+/*  			document.getElementsByClassName("WNDbuttons").style.visibility = "hidden";
+*/			  
+      
+            
+                   var arr=[lov_id,function_id];
+                   console.log("Arr:",arr);
+                   
+                  /*  const map = '{"name":"John", "age":30, "city":"New York"}';
+                   const obj = JSON.parse(map); */
+
+                   frameElem.src=origin+"/"+parent.getProjectName()+"/LovServlet1?getLogField=Field&lov_id="+lov_id+"&"+"function_id="+function_id;
+	       
+	        
+	       /*  ifrm.style.width = "800px";
+	        ifrm.style.height = "800px"; */
+	       
+	      
+	          
+	         
+	         var LOVL=document.getElementById('LOVL').innerText;
+	/*   myWindow = window.open(url, "popupWin", "width=600,height=500"); 		
+	myWindow.focus(); */
+	
+	
+	
+	
+	
+	/* 
+	  myWindow = window.open(url, "", "width=600,height=500");
+	  myWindow.document.write('<iframe  name="SearchFrameId" id="iframeChild" height="500px"  allowTransparency="true"  frameborder="0" scrolling="yes" style="width:100%;" src="'+ifrem.src+'" type= "text/javascript"></iframe>');   
+	 var _url="http://localhost:8080/Dynamic_Web_Menu_Page_new11/Searching"; */
+     
+	//window.open(_url, "");
+	//myWindow.open(_url);
+ 
+	  
+}
+
+/* var rowIds = [];
+//Inside the JavaScript code that creates the table rows
+var table = document.getElementById('myTable');
+var rowCount =	document.getElementById('countRow').value = table.tBodies[0].rows.length;
+for (var i = 0; i < rowCount; i++) {
+  var row = document.createElement('tr');
+  var rowId = 'inputid' + i; // Generate the row ID dynamically
+
+  row.setAttribute('id', rowId);
+  rowIds.push(rowId); // Store the row ID in the array
+
+  // Create the row cells and content dynamically
+  // ...
+
+}
+
+//Access the stored row IDs
+for (var i = 0; i < rowIds.length; i++) {
+  var rowId = rowIds[i];
+  // Do something with the row ID
+}
+console.log(rowId); */
+
+
+
+var c = 0; 
+var element1;
+var t=0;
+var table = document.getElementById("dataTable");
+var cell4=0;
+var row=0;
+
+var inputdesc;
+var inputid;
+document.getElementById('countRow').value =table.tBodies[0].rows.length;
+function addRow(tableID){
+	/* var table = document.getElementById(tableID); */
+
+	var rowCount = table.tBodies[0].rows.length;
+	 row = table.tBodies[0].insertRow(rowCount);
+	 
+	 row.setAttribute('id',"sbox"+c); 
+	document.getElementById('countRow').value = table.tBodies[0].rows.length;
+	
+	var cell1 = row.insertCell(0);
+	/* for (let i=0; i<=row ; i++){
+		row++;
+	} */
+	 element1 = document.createElement("input");
+	element1.type = "checkbox";
+	element1.name = "chkbox[]";
+	
+	
+	cell1.appendChild(element1);
+
+	var cell2 = row.insertCell(1);
+	var element2 = document.createElement("input");
+	element2.type = "text";
+	element2.name = "role_id" + c;
+	element2.id = "inputid" + c;
+	if(recivedArray.role_id != undefined)
+	{
+	 element2.value=recivedArray.role_id; 
+	/* element2.readOnly=true; */
+	}
+	cell2.appendChild(element2);
+	
+	/* element2.value=jsarray[t]; */
+	/* row.insertCell(0); */
+	
+	
+	
+	var cell3 = row.insertCell(2);
+	 var element3 = document.createElement("img");
+	   element3.src = src="Img/lov_search.png";
+	   element3.id = "searcher_" + c;
+		element3.width="20";
+		element3.height="20";
+		
+		
+		/*  for(var index=0;index<document.getElementById('countRow').value;index++){
+			  var inputTD="inputtd";
+			  var inputTD1="inputtd1";
+			  
+			  console.log("inputTD::"+inputTD);
+			  console.log("inputTD1::"+inputTD1); 
+		  /* inputdesc="inputdesc"+c;
+		  inputid="inputid"+c; */
+		  /* var frameinVar="frameinWin1('LOV_MODUSER_ROLE','MODUSER','List of Values ROLES');insertData('"+inputdesc+"','"+inputid+"')"; */
+		  element3.setAttribute('onclick', "frameinWin1('LOV_MODUSER_ROLE','MODUSER','List of Values ROLES');insertData('"+inputid+"','"+inputdesc+"')"); 
+		  
+		  //element3.setAttribute('onclick', "frameinWin1('LOV_MODUSER_ROLE','MODUSER','List of Values ROLES');insertData('inputid0','inputdesc0')");
+		  /*  element3.setAttribute('onclick', "frameinWin1('LOV_MODUSER_ROLE','MODUSER','List of Values ROLES');insertData(inputTD,inputtd1)"); */
+		
+		cell3.appendChild(element3);
+ 	 
+ 	/*
+	 var copycel = document.getElementById('sBox0').innerHTML;
+	var element4 = document.createElement("TD");
+	  cell4.innerHTML=copycel;
+	   */
+	   
+	   
+	   cell4 = row.insertCell(3);
+	   var element4 = document.createElement("input");
+		element4.type = "text";
+		element4.name = "role_desc" + c;
+		element4.id = "inputdesc" + c;
+		if(recivedArray.role_desc != undefined)
+			{
+		 element4.value =recivedArray.role_desc; 
+			}
+		
+		cell4.appendChild(element4);
+	  
+	  
+	  /* cell4.setAttribute('id',"sbox"+c);  */
+	/* var element3 = document.createElement("input");
+	element3.type = "button";
+	element3.name = "role_desc" + c;
+	element3.style ="margin:auto;max-width:300px";
+	
+	/* element3.value = jsarray[t+1]; */
+	 
+ 	/*  cell3.appendChild(element3);  */
+	
+
+	
+	c++;
+	console.log("insert rows::", c);
+	/* document.getElementById('countRow').value = product(t); */
+	t++;
+	t++;
+	
+	row.addEventListener('click', (event) => {
+		
+		/* let currentRow	= parseInt(event.target.id.split("_")[1]);
+		console.log("currentRow::",currentRow,"      ",event.target.id.split("_")[1]);
+		let rowabc=3;
+			console.log("arpita:::"+parseInt(currentRow+rowabc));
+			console.log("Row_id",row.id+" Event: ",event,"   ",row.childNodes[1].childNodes[0].id,row.childNodes[3].childNodes[0].id);
+			arr[0]=row.childNodes[1].childNodes[0].id;
+			arr[1]=row.childNodes[3].childNodes[0].id; */
+			
+			
+               let currentRow	= Array.from(event.currentTarget.children);
+			
+			console.log("event.target1::",currentRow[1].childNodes[0].id);
+			console.log("event.target3::",currentRow[3].childNodes[0].id);
+			
+			
+			arr[1]=currentRow[1].childNodes[0].id;
+			arr[0]=currentRow[3].childNodes[0].id; 
+			
+			/* window.location = "?role_master="+event.target.value; */
+			 /*  if (myWindow != null && !myWindow.closed) {
+				  
+			var txtNameData = myWindow.document.getElementById("tableSizeSendData");
+								
+			txtNameData.value = element2.id;
+			
+              var txtNameData1 = myWindow.document.getElementById("tableSizeSendData1");
+              
+             txtNameData1.value = element3.id;   
+             
+        } */
+	});
+	
+}
+
+
+
+/* window.location.href+"?count="+count1;  */
+
+/* fetch("http://localhost:8080/Dynamic_Web_Menu_Page_new11/UserID_Role_Creation.jsp?count=+"count1); */
+
+function deleteRow(tableID) {
+			try {
+			var table = document.getElementById(tableID);
+			var rowCount = table.rows.length;
+
+			for(var i=0; i<rowCount; i++) {
+				var row = table.rows[i];
+				var chkbox = row.cells[0].childNodes[0];
+				if(null != chkbox && true == chkbox.checked) {
+					if(rowCount <=1) {
+						alert("Cannot delete all the rows.");
+						break;
+					}
+					table.deleteRow(i);
+					rowCount--;
+					i--;
+				}
+			}
+			}catch(e) {
+				alert(e);
+			}
+		}
+
+function modifySave(){
+	 document.getElementById("NewId").style.display="";
+	 document.getElementById("Id").style.display="";
+	 document.getElementById("ModifyId").style.display="";
+	 document.getElementById("DeleteId").style.display="";
+}
+</script>
+</body>
+</html>
+
+

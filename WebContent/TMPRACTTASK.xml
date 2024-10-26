@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="TMPRACTTASK.xsl"?>
+<div>
+<header>
+<button1>New</button1>
+<button2>Query</button2>
+<button3>Modify</button3>
+<button4>Delete</button4>
+<button5>Close</button5>
+<button6>Approval</button6>
+<button7>Reopen</button7>
+<br></br>
+<button8>Save</button8>
+<button9>Execute</button9> 
+</header>
+
+ 
+
+<tbody>
+<field1>PRACTIONER ID *:</field1>
+<field2>PRACTIONER NAME :</field2>
+<field3>PRACTIONER MOB :</field3>
+<field4>PRACTIONER EMAIL :</field4>
+<field5>JOINING DATE :</field5>
+
+
+
+</tbody>
+
+ 
+
+ <footer1>
+ <fieldl6>PROJECT ID:</fieldl6>
+  <fieldl7>PROJECT NAME:</fieldl7>
+<fieldl8>MASTER PROJECT ID :</fieldl8>
+<fieldl9>MASTER PROJECT NAME:</fieldl9>
+<fieldl10>PARENT PROJECT ID:</fieldl10>
+<fieldl11>PARENT PROJECT NAME:</fieldl11>
+</footer1>
+
+
+
+<footer>
+<type1>Maker:</type1>
+<type2>Approver:</type2>
+<type3>Status:</type3>
+<type4>Once Auth:</type4>
+<type5>Maker DT stamp:</type5>
+<type6>Aprover DT stamp:</type6>
+<type7>Approver status:</type7>
+<type8>Cancel</type8>
+</footer>
+</div>

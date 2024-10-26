@@ -1,0 +1,76 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"PRACTIONAL_COMPASSET_FOTTERTABLE",
+		"PRACTIONAL_COMPASSET "
+	],
+	"BLOCK": {
+		"BLK_PRACTITIONER_COMPASSET_FOTTERTABLE": {
+			"pract_id": "pract_id",
+			"maker": "cust_maker",
+			"maker_dt_stamp": "cust_maker_dt_stamp",
+			"Approver": "cust_Approver",
+			"APROVERTIME": "cust_Aprovertime",
+			"Status": "cust_Status",
+			"Approver_statement": "cust_Approver_statement",
+			"Once_Auth": "cust_Once_Auth",
+			"countRow": "countRow"
+		}
+	},
+	"Get_BLOCK": {
+		"BLK_PRACTITIONER_COMPASSET": {
+			"ASSET_NO": "assetno",
+			"ASSET_NAME": "assetname",
+			"ASSET_TYPE": "assettype",
+			"SERIAL_NO": "serialno"
+		}
+	},
+	"DYNAMIC_BLOCK": {
+		"BLK_PRACTITIONER_COMPASSET": {
+			"pract_id": "pract_id"
+		},
+		"BLK2_PRACTITIONER_COMPASSET": {
+		    "ASSET_NO": "assetno",
+			"ASSET_STARTDATE": "assetstartdate",
+			"ASSET_ENDDATE": "assetenddate",
+			"status": "status"
+		}
+	},
+	"VIEW_BLOCK": {
+		"VW_PRACTITIONER_COMPASSET_FOTTERTABLE": {
+			"pract_id": "pract_id",
+			"pract_name": "pract_name",
+			"maker":"cust_maker",
+			"maker_dt_stamp": "cust_maker_dt_stamp",
+			"Approver": "cust_Approver",
+			"APROVERTIME": "cust_Aprovertime",
+			"Status": "cust_Status",
+			"Approver_statement": "cust_Approver_statement",
+			"Once_Auth": "cust_Once_Auth",
+			"countRow": "countRow"
+		},
+		"VW_PRACTITIONER_COMPASSET": {
+			"ASSET_NO": "assetno",
+			"ASSET_NAME": "assetname",
+			"ASSET_TYPE": "assettype",
+			"SERIAL_NO": "serialno",
+			"ASSET_STARTDATE": "assetstartdate",
+			"ASSET_ENDDATE": "assetenddate",
+			"status": "status"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "PRACTITIONER_COMPASSET_FOTTERTABLE",
+			"PRACTITIONER_COMPASSET_FOTTERTABLE": "pract_id"
+		},
+		"DYNAMIC_TABLE_RELATION": {
+			"DYNAMIC_TABLE1": "PRACTITIONER_COMPASSET",
+			"PRACTITIONER_COMPASSET": "pract_id"
+		},
+		"Get_Table_Relation": {
+			"Get_Table1": "PRACTITIONER_COMPASSET",
+			"PRACTITIONER_COMPASSET": "pract_id"
+		}
+	}
+}

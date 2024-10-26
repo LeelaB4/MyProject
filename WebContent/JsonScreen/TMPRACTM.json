@@ -1,0 +1,33 @@
+{
+	"DATASOURCE": "Table",
+	"Table": [
+		"Practional_Maintenance"
+	],
+	"BLOCK": {
+		"BLK_practitioner_Maintenance": {
+			"pract_id": "pract_empid",
+			"pract_name": "pract_name",
+			"pract_type": "pract_type",
+			"pract_org": "pract_org",
+			"pract_email": "pract_email",
+			"pract_mob": "pract_mob",
+			"pract_mgr": "pract_mgr",
+			"pract_joiningdate": "pract_joiningdate",
+			"pract_exitdate": "pract_exitdate",
+			"pract_innotice": "pract_innotice",
+			"maker": "maker",
+			"maker_dt_stamp": "maker_dt_stamp",
+			"Approver": "Approver",
+			"APROVERTIME": "Aprovertime",
+			"Status": "Status",
+			"Approver_statement": "Approver_statement",
+			"Once_Auth": "Once_Auth"
+		}
+	},
+	"Relations": {
+		"Parent_Table_Relation": {
+			"parent_table": "practitioner_Maintenance",
+			"practitioner_Maintenance": "pract_id"
+		}
+	}
+}
